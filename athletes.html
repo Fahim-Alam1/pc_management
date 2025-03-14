@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Athlete Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<style>
+@font-face { font-family: Bodoni; src: url('/fonts/BodoniFLF-Roman.ttf');}
+@font-face { font-family: Bodoni; font-weight: bold; src: url('/fonts/BodoniFLF-Bold.ttf');}
+
+body{
+	margin: auto;
+	background-color:#faeacd;
+	color: #ffffff;
+	line-height: 1.5;
+}
+
+.header {
+	position: sticky;
+	top: 0;
+	padding: 10px 20px 25px;
+	background: #191919;
+	color: #f1f1f1;
+	margin: 0;
+	font-family: Bodoni, serif;
+	font-weight: bold;
+}
+
+h1{
+	color: black;
+	text-align: center;
+	font-family: Bodoni, serif;
+}
+.header_button{
+	background-color: #191919;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	font-family: Bodoni, serif;
+	font-size: 1.5vw;
+	float: left;
+	padding-top: 5px;
+	padding-right: 2vw;
+}
+
+.logo_button{
+	background-color: #191919;
+	border: none;
+	color: white;
+	text-align: left;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	font-family: Bodoni, serif;
+	float: left;
+	padding-top: 5px;
+	padding-right: 22vw;
+}
+
+.athlete_container{
+	display: grid;
+	align-items:center;
+	grid-template-columns: 1fr 3fr;
+	grid-column-gap: 3%;
+	width: 90%;
+	margin-left: 5%;
+	margin-bottom: 2%;
+	background-color: gray;
+}
+
+.athlete_container_right{
+	display: grid;
+	align-items:center;
+	grid-template-columns: 3fr 1fr;
+	grid-column-gap: 3%;
+	width: 90%;
+	margin-left: 5%;
+	background-color: gray;
+}
+
+.athlete_photo{
+	aspect-ratio:1/1;
+	max-height:100%;
+	vertical-align:text-bottom;
+}
+
+.paragraph_text{
+	white-space: pre-line;
+}
+
+@media screen and (max-width: 600px){
+	.header_button{
+		display: none;
+	}
+}
+}
+</style>
+</head>
+<body>
+	<main>
+		<div class="header">
+			<div class="content-width">
+				<div class="header">
+					<a href="index.html">
+						<button class="logo_button">
+							<img src="main_logo.JPG" alt="Logo" width="40">
+						</button>
+					</a>
+					<a href="athletes.html">
+						<button class="header_button">
+							Athletes
+						</button>
+					</a>
+					<a href="about.html">
+						<button class="header_button">
+							About
+						</button>
+					</a>
+					<a href="services.html">
+						<button class="header_button">
+							Services
+						</button>
+					</a>
+					<a href="testimonials.html">
+						<button class="header_button">
+							Testimonials
+						</button>
+					</a>	
+					<a href="contact.html">
+						<button class="header_button">
+							Contact
+						</button>
+					</a>
+					<a href="privacy.html">
+						<button class="header_button">
+							Privacy
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>
+		<h1>
+		Our Athletes
+		</h1>
+		<div class="athlete_container">
+		<a href="athlete_pages/amos_aguilera.html">
+			<img src="athlete_pages/athlete_data/amos_aguilera/amos_image.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
+		</a>
+		<div id="amos_info" class="paragraph_text"> Name: Amos Aguilera
+			Sport: Jurupa Hills High School
+			Story:Amos Aguilera is a 6'1", 170-pound first baseman from Fontana, CA, with a tall, projectable frame and room to add strength. A multi-sport athlete competing in basketball and wrestling, he brings athleticism, coordination, and toughness to the baseball field. Defensively, he has soft hands, solid footwork, and a strong feel for the glove, making him a reliable presence at first base. His short arm action leads to accurate throws, and with further development—particularly by driving through his target—he can add more velocity.
+
+		</div>
+		</div>
+
+		<div class="athlete_container_right">
+		<div id="amos_info" class="paragraph_text" style = "margin-left:5%;"> Name: Amos Aguilera	
+			Sport: Jurupa Hills High School
+			Story:Amos Aguilera is a 6'1", 170-pound first baseman from Fontana, CA, with a tall, projectable frame and room to add strength. A multi-sport athlete competing in basketball and wrestling, he brings athleticism, coordination, and toughness to the baseball field. Defensively, he has soft hands, solid footwork, and a strong feel for the glove, making him a reliable presence at first base. His short arm action leads to accurate throws, and with further development—particularly by driving through his target—he can add more velocity.
+
+		</div>
+		<a href="athlete_pages/amos_aguilera.html">
+			<img src="athlete_pages/athlete_data/amos_aguilera/amos_image.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
+		</a>
+		</div>
+		
+		
+		
+		<script>
+		<!-- function load_data(name,Id_ref){
+			document.getElementById(Id_ref).style.color = "blue";
+			fetch("athlete_pages/athlete_data/amos_aguilera/amos_aguilera.txt")
+				.then(res => {
+				var input = res.body.getReader();
+				var reader = new FileReader();
+				reader.onload = function(){
+					var text = reader.result;
+					document.getElementById(Id_ref).innerText = text;
+				};
+				reader.readAsText(input.files[0]);
+				})
+		}
+		
+		load_data("amos_aguilera","amos_info"); -->
+		</script>
+		
+		
+		
+		<input type="file" id="fileInput" />
+<div id="fileInfo"></div>
+
+</body>
+</html>

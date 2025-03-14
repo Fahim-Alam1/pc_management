@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Athlete Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<style>
+@font-face { font-family: Bodoni; src: url('/fonts/BodoniFLF-Roman.ttf');}
+@font-face { font-family: Bodoni; font-weight: bold; src: url('/fonts/BodoniFLF-Bold.ttf');}
+
+body{
+	margin: auto;
+	background-color:#faeacd;
+	color: #ffffff;
+	line-height: 1.5;
+}
+
+.header {
+	position: sticky;
+	top: 0;
+	padding: 10px 20px 25px;
+	background: #191919;
+	color: #f1f1f1;
+	margin: 0;
+	font-family: Bodoni, serif;
+	font-weight: bold;
+}
+
+h1{
+	color: black;
+	text-align: center;
+	font-family: Bodoni, serif;
+}
+.header_button{
+	background-color: #191919;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	font-family: Bodoni, serif;
+	font-size: 1.5vw;
+	float: left;
+	padding-top: 5px;
+	padding-right: 2vw;
+}
+
+.logo_button{
+	background-color: #191919;
+	border: none;
+	color: white;
+	text-align: left;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	font-family: Bodoni, serif;
+	float: left;
+	padding-top: 5px;
+	padding-right: 22vw;
+}
+
+.stats{
+	border: none;
+	color: black;
+	white-space: pre-line;
+	margin-left: 5%;
+}
+
+.athlete_photo{
+	margin-right: 5%;
+	aspect-ratio:1/1;
+	max-height:100%;
+	vertical-align:text-bottom;
+}
+</style>
+</head>
+<body>
+	<main>
+		<div class="header">
+			<div class="content-width">
+				<div class="header">
+					<a href="index.html">
+						<button class="logo_button">
+							<img src="..\main_logo.JPG" alt="Logo" width="40">
+						</button>
+					</a>
+					<a href="athletes.html">
+						<button class="header_button">
+							Athletes
+						</button>
+					</a>
+					<a href="about.html">
+						<button class="header_button">
+							About
+						</button>
+					</a>
+					<a href="services.html">
+						<button class="header_button">
+							Services
+						</button>
+					</a>
+					<a href="testimonials.html">
+						<button class="header_button">
+							Testimonials
+						</button>
+					</a>	
+					<a href="contact.html">
+						<button class="header_button">
+							Contact
+						</button>
+					</a>
+					<a href="privacy.html">
+						<button class="header_button">
+							Privacy
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>
+		<h1>
+		Amos Aguilera
+		</h1>
+		<div style = "display: grid;align-items:center;	grid-template-columns: 3fr 1fr;	grid-column-gap: 3%;">
+		<div class = "stats">
+		Amos’ Stats
+		Positional Profile: 1B
+		Body: 6-3, 200 pounds. Strong frame with present strength.
+		Hit: RHH. Slightly open stance that evens out when he strides. Hands rest away from
+		back shoulder. Higher launch angle that produces a lot of fly balls. 64.3 mph bat
+		speed with 12g of rotational acceleration.
+		Power: 89 mph max exit velocity (78 avg.); 339-foot max batted distance.
+		Consistently pulls the ball.
+		Arm: RH. INF - 71.00 mph. Side arm release across the infield.
+		Defense: Calm footwork through the play.
+		Athletic Testing: 7.55 runner in the 60-yard dash; Long, tall strides.
+		</div>
+		<div class = "athlete_photo">
+				<img src="athlete_data/amos_aguilera/amos_image.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
+		</div>
+		</div>
+</body>
+</html>

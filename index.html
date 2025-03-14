@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Sets the whole webpage background to cream */
+        body {
+            background-color: #FFFDD0; /* Cream color */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .content h1 {
+            text-align: center;
+            font-weight: Bold;
+            font-family: "Bodoni", serif;
+            font-size: 100px;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .content p {
+            text-align: center;
+            font-style: normal;
+            font-family: "Lato", serif;
+            font-size: larger;
+        }
+
+        .content h2{
+            font-style: normal;
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-size: xxx-large;
+        }
+
+        .image-container {
+            background-color: black;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center; /* Vertically aligns items */
+            justify-content: space-between; /* Pushes logo left, menu right */
+            height: 100px; /* Adjust as needed */
+            position: fixed; /* Keeps it fixed at the top */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensures it stays above other content */
+            box-sizing: border-box;
+            border-radius: 15px;
+            width: 100%;
+        }
+
+        /* Pushes content down so it doesn’t overlap with fixed header */
+        .content {
+            padding-top: 100px; /* Adjust based on header height */
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .header-content img {
+            margin-left: 20px; /* Adds spacing for the logo */
+        }
+
+        .header-content nav {
+            margin-left: auto; /* Pushes nav menu to the right */
+        }
+
+        .header-content nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .header-content nav ul li {
+            margin: 0 15px;
+        }
+
+        .header-content nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .footer {
+            background-color: black;
+            padding: 30px 50px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+
+        .footer h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-icons img {
+            width: 24px; /* Adjust icon size */
+            height: 24px;
+        }
+
+        .text-box {
+            background-color: white; /* Box background */
+            border: 2px solid black; /* Border around the box */
+            padding: 20px; /* Adds space inside the box */
+            margin: 20px auto;
+            width: 50%; /* Adjust width as needed */
+            max-width: 700px; /* Limits max width */
+            text-align: center; /* Centers the text */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a drop shadow */
+            border-radius: 10px; /* Rounds the corners */
+            font-family: "Lato", serif;
+        }
+
+        .text-box h2 {
+            text-align: center;
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-style: normal;
+        }
+    </style>
+    <title>Home</title>
+</head>
+
+<body>
+
+    <div class="image-container" id="header-placeholder">
+        <!-- Header will be loaded here -->
+<!--        <img src="main_logo.JPG" alt="Logo" width="90">-->
+<!--        <nav>-->
+<!--            <ul>-->
+<!--                <li><a href="index.html">Home</a></li>-->
+<!--                <li><a href="about.html">About</a></li>-->
+<!--                <li><a href="athletes.html">Athletes</a></li>-->
+<!--                <li><a href="contact.html">Contact</a></li>-->
+<!--                <li><a href="privacy.html">Privacy</a></li>-->
+<!--                <li><a href="services.html">Services</a></li>-->
+<!--                <li><a href="testimonials.html">Testimonial</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+    </div>
+
+    <div class="content">
+        <h1>Welcome to the Player Club Management</h1>
+        <p>Unlock your full potential in the NIL space with a team that puts athletes first. Whether you're a student-athlete looking to maximize your brand or a business searching for top-tier athlete partnerships, we're here
+            to connect you to the right opportunities.</p>
+<!--       <p style="height: 1500px;">This is a long page to test scrolling.</p>-->
+    </div>
+
+    <div class="text-box">
+        <h2>Why choose us?</h2>
+        <p>Athlete-First Approach - We prioritize the long-term success and well-being of our athletes. </br>
+            Strategic Brand Partnerships - We connect student-athletes with companies that align with their values.</br>
+            Financial Growth & Education - We help athletes make informed decisions about their earnings.</br>
+            Marketing & Exposure - Our team ensures athletes get the visibility they deserve.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-section">
+            <img src="main_logo.JPG" alt="Logo" width="90">
+            <div class="social-icons">
+                <img src="twitter_icon.png" alt="Twitter"> <a href="#">Social Media Link</a>
+            </div>
+            <div class="social-icons">
+                <img src="phone_icon.png" alt="Phone"> <a href="#">Social Media Link 2</a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="athletes.html">Athletes</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="testimonials.html">Testimonial</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>About</h3>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Information</h3>
+            <p>Business Email</p>
+            <p>Business Address</p>
+            <p>City, State, Zip</p>
+        </div>
+
+        <div class="copyright">
+            Copyright & Privacy information for the company if needed
+        </div>
+    </footer>
+
+    <script>
+        fetch('./header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+
+                // Ensure styling applies after loading header
+                setTimeout(() => {
+                    document.querySelector(".header-content").classList.add("image-container");
+                }, 100);
+            })
+            .catch(error => console.error("Error loading header:", error));
+    </script>
+
+</body>
+</html>
