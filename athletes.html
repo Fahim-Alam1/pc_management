@@ -173,15 +173,8 @@ h1{
 		function load_data(name,Id_ref){
 			document.getElementById(Id_ref).style.color = "blue";
 			fetch("athlete_pages/athlete_data/amos_aguilera/amos_aguilera.txt")
-				.then(res => {
-				var input = res.body.getReader();
-				var reader = new FileReader();
-				reader.onload = function(){
-					var text = reader.result;
-					document.getElementById(Id_ref).innerText = text;
-				};
-				reader.readAsText(input.files[0]);
-				})
+			.then(x => x.text())
+			.then(y => document.getElementById(Id_ref).innerHTML = y);				
 		}
 		window.onload = function() {
 		load_data("amos_aguilera","amos_info"); 
