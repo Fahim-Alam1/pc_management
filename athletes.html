@@ -172,7 +172,7 @@ h1{
 		<script>
 		function load_data(name,Id_ref){
 			document.getElementById(Id_ref).style.color = "blue";
-			fetch("athlete_pages/athlete_data/amos_aguilera/amos_aguilera.txt")
+			fetch("./athlete_pages/athlete_data/amos_aguilera/amos_aguilera_intro.txt")
 			.then(x => x.text())
 			.then(y => document.getElementById(Id_ref).innerHTML = y);				
 		}
