@@ -127,29 +127,6 @@
                 </div>
             </div>
         </div>
-   
-    <!-- Leave a Review Section -->
-    <div class="review-section">
-        <h2>Leave a Review</h2>
-        <p>We'd love to hear your feedback! Share your experience with us.</p>
-        <textarea id="reviewBox" placeholder="Type your review here..."></textarea>
-        <button onclick="submitReview()">Submit Review</button>
-        <p id="reviewMessage" style="display: none; color: green; font-weight: bold;"></p>
-    </div>
-
-    <!-- JavaScript for Review Submission -->
-    <script>
-        function submitReview() {
-            let reviewText = document.getElementById("reviewBox").value;
-            if (reviewText.trim() === "") {
-                alert("Please enter a review before submitting.");
-            } else {
-                document.getElementById("reviewMessage").innerText = "Thank you for your review!";
-                document.getElementById("reviewMessage").style.display = "block";
-                document.getElementById("reviewBox").value = ""; // Clear text box after submission
-            }
-        }
-    </script>
 
     <!-- CSS Styling for Review Section -->
     <style>
@@ -197,7 +174,15 @@
             background-color: #333;
         }
     </style>
-
+<!-- Leave a Review Section -->
+<div class="review-section">
+    <h2>Leave a Review</h2>
+    <p>We'd love to hear your feedback! Share your experience with us.</p>
+    <form action="https://formspree.io/f/xpwpqvdq" method="POST">
+        <textarea name="review" placeholder="Type your review here..." required></textarea>
+        <button type="submit">Submit Review</button>
+    </form>
+</div>
 </div> <!-- Closing tag for .testimonial-section -->
 
 </body>
