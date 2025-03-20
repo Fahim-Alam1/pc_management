@@ -1,1 +1,190 @@
 <!--#include virtual="/header.html" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Testimonials</title>
+    <style>
+        @font-face { font-family: Bodoni; src: url('/fonts/BodoniFLF-Roman.ttf'); }
+        @font-face { font-family: Bodoni; font-weight: bold; src: url('/fonts/BodoniFLF-Bold.ttf'); }
+
+        body {
+            margin: 0;
+            background-color: #faeacd;
+            color: black;
+            font-family: Bodoni, serif;
+            text-align: center;
+        }
+
+        .testimonial-section {
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .testimonial-box {
+            background: #ffffff;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+
+        .testimonial-text {
+            font-size: 16px;
+            margin: 15px 0;
+        }
+
+        .testimonial-author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-author span {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .cta-section {
+            margin-top: 40px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 24px;
+            background: black;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background: #333;
+        }
+
+        /* Responsive Styling */
+        @media screen and (max-width: 768px) {
+            .testimonial-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="testimonial-section">
+        <h1>What our clients say about us.</h1> <h2> Why Us?</h2>
+        <div class="testimonial-container"> 
+            <div class="testimonial-box">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Dapibus gravida ultricies sagittis sem montes. Convallis congue suscipit, lacus felis dignissim elit.</p>
+                <div class="testimonial-author">
+                    <span>- Person One</span>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Dapibus gravida ultricies sagittis sem montes. Convallis congue suscipit, lacus felis dignissim elit.</p>
+                <div class="testimonial-author">
+                    <span>- person Two</span>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Dapibus gravida ultricies sagittis sem montes. Convallis congue suscipit, lacus felis dignissim elit.</p>
+                <div class="testimonial-author">
+                    <span>- Person Three</span>
+                </div>
+            </div>
+        </div>
+
+    <!-- CSS Styling for Review Section -->
+    <style>
+        .review-section {
+            text-align: center;
+            background: #faeacd;
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .review-section h2 {
+            font-family: Bodoni, serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .review-section textarea {
+            width: 80%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .review-section button {
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .review-section button:hover {
+            background-color: #333;
+        }
+    </style>
+<!-- Leave a Review Section -->
+<div class="review-section">
+    <h2>Leave a Review</h2>
+    <p>We'd love to hear your feedback! Share your experience with us.</p>
+    <form action="https://formspree.io/f/xpwpqvdq" method="POST">
+        <textarea name="review" placeholder="Type your review here..." required></textarea>
+        <button type="submit">Submit Review</button>
+    </form>
+</div>
+</div> <!-- Closing tag for .testimonial-section -->
+
+</body>
+</html>
+<!--#include virtual="/footer.html" -->
