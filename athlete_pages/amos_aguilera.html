@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Athlete Page</title>
+<title>Amos Aguilera</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <style>
@@ -27,6 +27,11 @@ body{
 }
 
 h1{
+	color: black;
+	text-align: center;
+	font-family: Bodoni, serif;
+}
+h2{
 	color: black;
 	text-align: center;
 	font-family: Bodoni, serif;
@@ -65,6 +70,11 @@ h1{
 	color: black;
 	white-space: pre-line;
 	margin-left: 5%;
+	display: grid;
+	align-items:center;
+	grid-template-columns: 1fr 1fr;
+	gird-template-rows:1fr 3fr;
+	grid-column-gap: 3%;
 }
 
 .athlete_photo{
@@ -80,37 +90,37 @@ h1{
 		<div class="header">
 			<div class="content-width">
 				<div class="header">
-					<a href="index.html">
+					<a href="../index.html">
 						<button class="logo_button">
 							<img src="..\main_logo.JPG" alt="Logo" width="40">
 						</button>
 					</a>
-					<a href="athletes.html">
+					<a href="../athletes.html">
 						<button class="header_button">
 							Athletes
 						</button>
 					</a>
-					<a href="about.html">
+					<a href="../about.html">
 						<button class="header_button">
 							About
 						</button>
 					</a>
-					<a href="services.html">
+					<a href="../services.html">
 						<button class="header_button">
 							Services
 						</button>
 					</a>
-					<a href="testimonials.html">
+					<a href="../testimonials.html">
 						<button class="header_button">
 							Testimonials
 						</button>
 					</a>	
-					<a href="contact.html">
+					<a href="../contact.html">
 						<button class="header_button">
 							Contact
 						</button>
 					</a>
-					<a href="privacy.html">
+					<a href="../privacy.html">
 						<button class="header_button">
 							Privacy
 						</button>
@@ -123,7 +133,21 @@ h1{
 		</h1>
 		<div style = "display: grid;align-items:center;	grid-template-columns: 3fr 1fr;	grid-column-gap: 3%;">
 		<div class = "stats">
-		Amos’ Stats
+		<div style = "display: in-line; font-size: 2vw;">Details</div>
+		<div style = "display: in-line; font-size: 2vw;">Stats</div>
+		<div style = "align-self: start; font-size: 1.25vw;">
+		School: Jurupa Hills High School
+		Weight: 200 lbs
+		Hometown: Fontana, CA
+		Class: Junior (2026)
+		Height: 6'4
+		Interests: Christian/ Believes in the lord,
+		Fitness, WWE, Recovery & Wellness
+		Sport: Baseball/Basketball/Wrestling
+		Social Media:
+			IG: <a href = "https://www.instagram.com/famous__amos00?igsh=NTc4MTIwNjQ2YQ==" style = "text-decoration: none;">famous___amos00 </a>
+		</div>
+		<div style = "align-self: start; font-size: 1.25vw;">
 		Positional Profile: 1B
 		Body: 6-3, 200 pounds. Strong frame with present strength.
 		Hit: RHH. Slightly open stance that evens out when he strides. Hands rest away from
@@ -135,9 +159,20 @@ h1{
 		Defense: Calm footwork through the play.
 		Athletic Testing: 7.55 runner in the 60-yard dash; Long, tall strides.
 		</div>
+		</div>
 		<div class = "athlete_photo">
 				<img src="athlete_data/amos_aguilera/amos_image.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
 		</div>
 		</div>
+		<h2>Highlights</h2>
+		<div style = "margin-left: 5%; margin-right: 5%; display: grid;align-items:center;	grid-template-columns: 3fr 1fr;	grid-column-gap: 10%;">
+			<iframe style = "aspect-ratio:16/9;" src="https://www.youtube.com/embed/5wZ8CaPJlLs" width = "100%">
+			</iframe>
+			<div>
+				<img src="athlete_data/amos_aguilera/amos_highlight_1.png" width="100%"/>
+				<img src="athlete_data/amos_aguilera/amos_highlight_2.png" width="100%"/>
+				<img src="athlete_data/amos_aguilera/amos_highlight_3.png" width="100%"/></div>
+		</div>
+	</main>
 </body>
 </html>
