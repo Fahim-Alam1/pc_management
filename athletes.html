@@ -5,8 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <style>
-@font-face { font-family: Bodoni; src: url('/fonts/BodoniFLF-Roman.ttf');}
-@font-face { font-family: Bodoni; font-weight: bold; src: url('/fonts/BodoniFLF-Bold.ttf');}
+@font-face { font-family: Bodoni; src: url(./fonts/BodoniFLF-Roman.ttf);}
+@font-face { font-family: Bodoni; font-weight: bold; src: url(./fonts/BodoniFLF-Bold.ttf);}
 
 body{
 	margin: auto;
@@ -89,6 +89,7 @@ h1{
 
 .paragraph_text{
 	white-space: pre-line;
+	margin-right:5%
 }
 
 @media screen and (max-width: 600px){
@@ -150,14 +151,12 @@ h1{
 			<img src="athlete_pages/athlete_data/amos_aguilera/amos_image.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
 		</a>
 		<div id="amos_info" class="paragraph_text"> Name: Amos Aguilera
-			Sport: Jurupa Hills High School
-			Story:Amos Aguilera is a 6'1", 170-pound first baseman from Fontana, CA, with a tall, projectable frame and room to add strength. A multi-sport athlete competing in basketball and wrestling, he brings athleticism, coordination, and toughness to the baseball field. Defensively, he has soft hands, solid footwork, and a strong feel for the glove, making him a reliable presence at first base. His short arm action leads to accurate throws, and with further development—particularly by driving through his target—he can add more velocity.
-
+			Document Failed to Load
 		</div>
 		</div>
 
 		<div class="athlete_container_right">
-		<div id="amos_info" class="paragraph_text" style = "margin-left:5%;"> Name: Amos Aguilera	
+		<div id="second_athlete_info" class="paragraph_text" style = "margin-left:5%;"> Name: Amos Aguilera
 			<!-- Sport: Jurupa Hills High School
 			Story:Amos Aguilera is a 6'1", 170-pound first baseman from Fontana, CA, with a tall, projectable frame and room to add strength. A multi-sport athlete competing in basketball and wrestling, he brings athleticism, coordination, and toughness to the baseball field. Defensively, he has soft hands, solid footwork, and a strong feel for the glove, making him a reliable presence at first base. His short arm action leads to accurate throws, and with further development—particularly by driving through his target—he can add more velocity.
 			-->Document failed to load
@@ -171,11 +170,10 @@ h1{
 		
 		<script>
 		function load_data(name,Id_ref){
-			document.getElementById(Id_ref).style.color = "blue";
-			fetch("./athlete_pages/athlete_data/amos_aguilera/amos_aguilera_intro.txt")
+			fetch("./athlete_pages/athlete_data/"+name+"/"+name+"_intro.txt")
 			.then(x => x.text())
 			.then(y => document.getElementById(Id_ref).innerHTML = y);				
-		}
+		};
 		window.onload = function() {
 		load_data("amos_aguilera","amos_info"); 
 		};
