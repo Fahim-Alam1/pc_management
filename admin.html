@@ -68,7 +68,7 @@
 		};
 
 	function load_data(name,need){
-			fetch("http://localhost:3000/athlete_data?name=" + name + "&need=" + need, {
+			fetch("http://76.220.71.108:3000/athlete_data?name=" + name + "&need=" + need, {
 				method: 'GET',
 				})
 				.then((response) => {
@@ -89,7 +89,7 @@
 
 	function save_data(name,need){
 			var text_to_save = document.getElementById("txt_edit").value;
-			fetch("http://localhost:3000/athlete_data?name=" + name + "&need=" + need, {
+			fetch("http://76.220.71.108:3000/athlete_data?name=" + name + "&need=" + need, {
 				method: 'POST',
 				headers: {
                     "Content-Type": "application/json",
