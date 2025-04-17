@@ -52,36 +52,56 @@
 		<p id= "Stats">Stats</p>
 	</div>
 </div>
-<textarea class = "text_editor" id = "txt_edit" >testing for text</textarea>
-<button class = "save_button">Save</button>
+<textarea class = "text_editor" id = "txt_edit" ></textarea>
+<button class = "save_button" id = "save_button">Save</button>
 <script>
-	//const fs = require('fs');
+	var name = '';
+	var need = '';
 	let save_location = "";
-	document.getElementById("Amos_Intro").onclick = function() {load_data("./athlete_pages/athlete_data/amos_aguilera/amos_aguilera_intro.txt")};
-	document.getElementById("save_button").onclick = function() {save_data()};
+	document.getElementById("Amos_Intro").onclick = function() {
+		name = "amos_aguilera";
+		need = "intro"
+		load_data(name,need)
+		};
+	document.getElementById("save_button").onclick = function() {
+		save_data(name,need)
+		};
 
-	function load_data(location){
-		fetch(location)
-			.then(x => x.text())
-			.then(y => document.getElementById("txt_edit").innerHTML = y);
-		save_location = location;
-		console.log("Fetch attempted");
+	function load_data(name,need){
+			fetch("http://localhost:3000/athlete_data?name=" + name + "&need=" + need, {
+				method: 'GET',
+				})
+				.then((response) => {
+					if (!response.ok){
+						console.log("I hate everything");
+						console.log(response.ok);
+					}
+					return response.text();
+				})
+				.then((text) => {
+					console.log("I got something");
+					console.log(text);
+					document.getElementById("txt_edit").value = text;})
+				.catch(error => {
+					console.error("you messed up", error);
+				});
 	};
 
-	function save_data(){
-		fetch(save_location)
-			.then(x => x.text())
-			.then(y => y = document.getElementById("txt_edit").innerHTML);
+	function save_data(name,need){
+			var text_to_save = document.getElementById("txt_edit").value;
+			fetch("http://localhost:3000/athlete_data?name=" + name + "&need=" + need, {
+				method: 'POST',
+				headers: {
+                    "Content-Type": "application/json",
+                },
+				body: JSON.stringify({
+					info: text_to_save
+					})
+				})
+				.then((response) => response.text())
+        		.then((text) => console.log(text));
 	};
 
-	/*
-	function save_data(){
-		data = document.getElementById("txt_edit").innerHTML;
-		fs.writeFile(save_location, data, (err) => {
-			if (err) throw err;
-		});
-	};
-	*/
 </script>
 </body>
 </html>

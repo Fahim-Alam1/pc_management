@@ -102,6 +102,7 @@ h1{
 </head>
 <body>
 	<main>
+		<!-- George's Old Header stuff
 		<div class="header">
 			<div class="content-width">
 				<div class="header">
@@ -143,6 +144,9 @@ h1{
 				</div>
 			</div>
 		</div>
+
+		-->
+		<div class="image-container" id="header-placeholder"></div>
 		<h1>
 		Our Athletes
 		</h1>
@@ -169,28 +173,41 @@ h1{
 		
 		
 		<script>
-		function load_data(name,Id_ref){
-			fetch("http://localhost:3000/amos_aguilera/amos_intro", {
-				method: 'GET',
-				})
-				.then((response) => {
-					if (!response.ok){
-						console.log("I hate everything");
-						console.log(response.ok);
-					}
-					return response.text();
-				})
-				.then((text) => {
-					console.log("I got something");
-					console.log(text);
-					document.getElementById(Id_ref).innerHTML = text;})
-				.catch(error => {
-					console.error("you messed up", error);
-				});
-		};
-		window.onload = function() {
-		load_data("amos_aguilera","amos_intro");
-		};
+			fetch('./header.html')
+    		.then(response => response.text())
+    		.then(data => {
+        	document.getElementById("header-placeholder").innerHTML = data;
+
+        // Ensure styling applies after loading header
+        	setTimeout(() => {
+     	       document.querySelector(".header-content").classList.add("image-container");
+     	   }, 100);
+   		})
+    	.catch(error => console.error("Error loading header:", error));
+
+
+function load_data(name,Id_ref){
+    fetch("http://localhost:3000/athlete_data?name=" + name + "&need=intro", {
+        method: 'GET',
+        })
+        .then((response) => {
+            if (!response.ok){
+                console.log("I hate everything");
+                console.log(response.ok);
+            }
+            return response.text();
+        })
+        .then((text) => {
+            console.log("I got something");
+            console.log(text);
+            document.getElementById(Id_ref).innerHTML = text;})
+        .catch(error => {
+            console.error("you messed up", error);
+        });
+};
+window.onload = function() {
+load_data("amos_aguilera","amos_intro");
+};
 		</script>
 		
 		
