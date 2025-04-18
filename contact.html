@@ -16,6 +16,81 @@
             font-family: Bodoni, serif;
             text-align: center;
         }
+        .footer {
+            background-color: black;
+            padding: 30px 50px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-icons img {
+            width: 24px; /* Adjust icon size */
+            height: 24px;
+        }
+
+        .text-box {
+            background-color: white; /* Box background */
+            border: 2px solid black; /* Border around the box */
+            padding: 20px; /* Adds space inside the box */
+            margin: 20px auto;
+            width: 50%; /* Adjust width as needed */
+            max-width: 700px; /* Limits max width */
+            text-align: center; /* Centers the text */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a drop shadow */
+            border-radius: 10px; /* Rounds the corners */
+            font-family: "Lato", serif;
+        }
+
+        .text-box h2 {
+            text-align: center;
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-style: normal;
+        }
 
         /* Centered Header Styling
         .header {
@@ -140,6 +215,49 @@
    <!-- <h1>placeholder...</h1>
     <h2>What our clients say about us.</h2>
 -->
+<!-- Footer Section -->
+<div class="footer">
+    <div class="footer-section">
+        <img src="main_logo.JPG" alt="Logo" width="90">
+        <div class="social-icons">
+            <img src="twitter_icon.png" alt="Twitter"> <a href="#">Social Media Link</a>
+        </div>
+        <div class="social-icons">
+            <img src="phone_icon.png" alt="Phone"> <a href="#">Social Media Link 2</a>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="athletes.html">Athletes</a></li>
+            <li><a href="services.html">Service</a></li>
+            <li><a href="testimonials.html">Testimonial</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h3>About</h3>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p>Business Email</p>
+        <p>Business Address</p>
+        <p>City, State, Zip</p>
+    </div>
+
+    <div class="copyright">
+        Copyright & Privacy information for the company if needed
+    </div>
+</div>
+
+
     <!-- JavaScript to load header.html -->
     <script>
         fetch('./header.html')
