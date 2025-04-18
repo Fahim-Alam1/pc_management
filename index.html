@@ -7,8 +7,8 @@
         /* Sets the whole webpage background to cream */
         body {
             background-color: #faeacd; /* Cream color */
-            /*margin: 0;*/
-            /*padding: 0;*/
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
         }
 
@@ -130,12 +130,12 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            margin: 0;
         }
 
         .footer-section {
             flex: 1;
             min-width: 200px;
-            margin: 10px;
         }
 
         .footer h3 {
@@ -237,7 +237,7 @@
     </div>
 
     <!-- Footer Section -->
-    <footer class="footer">
+    <div class="footer">
         <div class="footer-section">
             <img src="main_logo.JPG" alt="Logo" width="90">
             <div class="social-icons">
@@ -276,7 +276,7 @@
         <div class="copyright">
             Copyright & Privacy information for the company if needed
         </div>
-    </footer>
+    </div>
 
     <script>
         fetch('./header.html')
