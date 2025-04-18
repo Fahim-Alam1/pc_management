@@ -102,6 +102,7 @@ h1{
 </head>
 <body>
 	<main>
+		<!-- George's Old Header stuff
 		<div class="header">
 			<div class="content-width">
 				<div class="header">
@@ -143,6 +144,9 @@ h1{
 				</div>
 			</div>
 		</div>
+
+		-->
+		<div class="image-container" id="header-placeholder"></div>
 		<h1>
 		Our Athletes
 		</h1>
@@ -150,7 +154,7 @@ h1{
 		<a href="athlete_pages/amos_aguilera.html">
 			<img src="athlete_pages/athlete_data/amos_aguilera/amos_image.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
 		</a>
-		<div id="amos_info" class="paragraph_text"> Name: Amos Aguilera
+		<div id="amos_intro" class="paragraph_text"> Name: Amos Aguilera
 			Document Failed to Load
 		</div>
 		</div>
@@ -169,20 +173,47 @@ h1{
 		
 		
 		<script>
-		function load_data(name,Id_ref){
-			fetch("./athlete_pages/athlete_data/"+name+"/"+name+"_intro.txt")
-			.then(x => x.text())
-			.then(y => document.getElementById(Id_ref).innerHTML = y);				
-		};
-		window.onload = function() {
-		load_data("amos_aguilera","amos_info"); 
-		};
+			fetch('./header.html')
+    		.then(response => response.text())
+    		.then(data => {
+        	document.getElementById("header-placeholder").innerHTML = data;
+
+        // Ensure styling applies after loading header
+        	setTimeout(() => {
+     	       document.querySelector(".header-content").classList.add("image-container");
+     	   }, 100);
+   		})
+    	.catch(error => console.error("Error loading header:", error));
+
+
+function load_data(name,Id_ref){
+    fetch("http://localhost:3000/athlete_data?name=" + name + "&need=intro", {
+        method: 'GET',
+        })
+        .then((response) => {
+            if (!response.ok){
+                console.log("I hate everything");
+                console.log(response.ok);
+            }
+            return response.text();
+        })
+        .then((text) => {
+            console.log("I got something");
+            console.log(text);
+            document.getElementById(Id_ref).innerHTML = text;})
+        .catch(error => {
+            console.error("you messed up", error);
+        });
+};
+window.onload = function() {
+load_data("amos_aguilera","amos_intro");
+};
 		</script>
 		
 		
 		
 		<input type="file" id="fileInput" />
 <div id="fileInfo"></div>
-
+	</main>
 </body>
 </html>

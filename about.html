@@ -1,55 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>About Page</title>
-<style>
-body{
-	margin: auto;
-	background-color:#faeacd;
-	color: #ffffff;
-	line-height: 1.5;
-}
-  .header {
-            background: #191919;
-            padding:  10px 16px;
-            text-align: center;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #faeacd;
         }
-
-h1{
-	color: black;
-	text-align: center;
-	font-family: Bodoni, serif;
-}
-.itemblackout{
-	background-color: black;
-	color: white;
-	
-	font-family: Bodoni, serif;
-	}
-
-</style>
-
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header img {
+            position: absolute;
+            top: 15px;
+            width: 40px;
+            height: 40px;
+        }
+        .header img.left {
+            left: 20px;
+        }
+        .header img.right {
+            right: 20px;
+        }
+        .content {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .team-section {
+            padding: 20px;
+        }
+        .team {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            text-align: center;
+            width: 150px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .team-member h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .team-member p {
+            font-size: 12px;
+            color: #555;
+            line-height: 1.5;
+        }
+    </style>
+</head>
 <body>
-  <div class="header">
-        <a href="index.html">
-            <img src="main_logo.JPG" alt="Logo" width="40" >
-        </a>
-        <div class="nav-links">
-            <a href="athletes.html">Athletes</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="testimonials.html">Testimonials</a>
-            <a href="contact.html">Contact</a>
-            <a href="privacy.html">Privacy</a>
+
+    <div class="header">
+        <img src="left-icon.png" alt="Left Icon" class="left">
+        <h1>Goals of the Company</h1>
+        <p>Brief description here</p>
+        <img src="right-icon.png" alt="Right Icon" class="right">
+    </div>
+
+    <div class="header">
+        <h1>Background about the Company</h1>
+        <p>Brief description here</p>
+    </div>
+
+    <div class="content">
+        <h2>Our Team</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="team1.png" alt="Team Member 1">
+                <h3>Role</h3>
+                <p>tester1</p>
+            </div>
+            <div class="team-member">
+                <img src="team2.png" alt="Team Member 2">
+                <h3>Role</h3>
+                <p>tester2</p>
+            </div>
+            <div class="team-member">
+                <img src="team3.png" alt="Team Member 3">
+                <h3>Role</h3>
+                <p>tester3</p>
+            </div>
+            <div class="team-member">
+                <img src="team4.png" alt="Team Member 4">
+                <h3>Role</h3>
+                <p>tester4</p>
+            </div>
         </div>
     </div>
-	
-	
-<h1> ABOUT PAGE </h1>
-<class="itemblackout" style = "margin-left:5%;> insert info here
-<div
 
-
-	
-	
 </body>
+</html>

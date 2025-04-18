@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.14.0"
+  },
+  "name": "package.json",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fahim-Alam1/pc_management.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fahim-Alam1/pc_management/issues"
+  },
+  "homepage": "https://github.com/Fahim-Alam1/pc_management#readme",
+  "description": ""
+}
