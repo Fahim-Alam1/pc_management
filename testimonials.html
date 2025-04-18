@@ -6,8 +6,8 @@
     <title>Testimonials</title>
 
     <style>
-        @font-face { font-family: Bodoni; src: url('/fonts/BodoniFLF-Roman.ttf'); }
-        @font-face { font-family: Bodoni; font-weight: bold; src: url('/fonts/BodoniFLF-Bold.ttf'); }
+        @font-face { font-family: Bodoni; src: url(./fonts/BodoniFLF-Roman.ttf);}
+        @font-face { font-family: Bodoni; font-weight: bold; src: url(./fonts/BodoniFLF-Bold.ttf);}
 
         body {
             margin: 0;
@@ -21,9 +21,9 @@
             padding: 50px 20px;
         }
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 20px;
+        h2 {
+            font-size: 60px;
+            margin-bottom: 24px;
         }
 
         .testimonial-container {
@@ -38,7 +38,7 @@
             width: 300px;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
@@ -144,11 +144,10 @@
 
     <!-- Header will be loaded here -->
     <div id="header"></div>
-
-    <div class="testimonial-section">
-        <h1>What our clients say about us.</h1>
-        <h2>Why Us?</h2>
-        <div class="testimonial-container"> 
+    <div class="image-container" id="header-placeholder"></div>
+        <h1>placeholder...</h1>
+        <h2>What our clients say about us.</h2>
+        <div class="testimonial-container">
             <div class="testimonial-box">
                 <div class="quote-icon">“</div>
                 <p class="testimonial-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Dapibus gravida ultricies sagittis sem montes. Convallis congue suscipit, lacus felis dignissim elit.</p>
@@ -187,11 +186,17 @@
 
     <!-- JavaScript to load header.html -->
     <script>
-        fetch('header.html')
-            .then(res => res.text())
+        fetch('./header.html')
+            .then(response => response.text())
             .then(data => {
-                document.getElementById('header').innerHTML = data;
-            });
+                document.getElementById("header-placeholder").innerHTML = data;
+
+                // Ensure styling applies after loading header
+                setTimeout(() => {
+                    document.querySelector(".header-content").classList.add("image-container");
+                }, 100);
+            })
+            .catch(error => console.error("Error loading header:", error));
     </script>
 
 </body>
