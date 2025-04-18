@@ -1,10 +1,10 @@
-<!--#include virtual="/header.html" -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Testimonials</title>
+
     <style>
         @font-face { font-family: Bodoni; src: url('/fonts/BodoniFLF-Roman.ttf'); }
         @font-face { font-family: Bodoni; font-weight: bold; src: url('/fonts/BodoniFLF-Bold.ttf'); }
@@ -41,7 +41,6 @@
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
 
         .testimonial-text {
             font-size: 16px;
@@ -89,47 +88,13 @@
             background: #333;
         }
 
-        /* Responsive Styling */
         @media screen and (max-width: 768px) {
             .testimonial-container {
                 flex-direction: column;
                 align-items: center;
             }
         }
-    </style>
-</head>
-<body>
 
-    <div class="testimonial-section">
-        <h1>What our clients say about us.</h1> <h2> Why Us?</h2>
-        <div class="testimonial-container"> 
-            <div class="testimonial-box">
-                <div class="quote-icon">“</div>
-                <p class="testimonial-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Dapibus gravida ultricies sagittis sem montes. Convallis congue suscipit, lacus felis dignissim elit.</p>
-                <div class="testimonial-author">
-                    <span>- Person One</span>
-                </div>
-            </div>
-
-            <div class="testimonial-box">
-                <div class="quote-icon">“</div>
-                <p class="testimonial-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Dapibus gravida ultricies sagittis sem montes. Convallis congue suscipit, lacus felis dignissim elit.</p>
-                <div class="testimonial-author">
-                    <span>- person Two</span>
-                </div>
-            </div>
-
-            <div class="testimonial-box">
-                <div class="quote-icon">“</div>
-                <p class="testimonial-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Dapibus gravida ultricies sagittis sem montes. Convallis congue suscipit, lacus felis dignissim elit.</p>
-                <div class="testimonial-author">
-                    <span>- Person Three</span>
-                </div>
-            </div>
-        </div>
-
-    <!-- CSS Styling for Review Section -->
-    <style>
         .review-section {
             text-align: center;
             background: #faeacd;
@@ -174,17 +139,60 @@
             background-color: #333;
         }
     </style>
-<!-- Leave a Review Section -->
-<div class="review-section">
-    <h2>Leave a Review</h2>
-    <p>We'd love to hear your feedback! Share your experience with us.</p>
-    <form action="https://formspree.io/f/xpwpqvdq" method="POST">
-        <textarea name="review" placeholder="Type your review here..." required></textarea>
-        <button type="submit">Submit Review</button>
-    </form>
-</div>
-</div> <!-- Closing tag for .testimonial-section -->
+</head>
+<body>
+
+    <!-- Header will be loaded here -->
+    <div id="header"></div>
+
+    <div class="testimonial-section">
+        <h1>What our clients say about us.</h1>
+        <h2>Why Us?</h2>
+        <div class="testimonial-container"> 
+            <div class="testimonial-box">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Dapibus gravida ultricies sagittis sem montes. Convallis congue suscipit, lacus felis dignissim elit.</p>
+                <div class="testimonial-author">
+                    <span>- Person One</span>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Dapibus gravida ultricies sagittis sem montes. Convallis congue suscipit, lacus felis dignissim elit.</p>
+                <div class="testimonial-author">
+                    <span>- Person Two</span>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Dapibus gravida ultricies sagittis sem montes. Convallis congue suscipit, lacus felis dignissim elit.</p>
+                <div class="testimonial-author">
+                    <span>- Person Three</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leave a Review Section -->
+    <div class="review-section">
+        <h2>Leave a Review</h2>
+        <p>We'd love to hear your feedback! Share your experience with us.</p>
+        <form action="https://formspree.io/f/xpwpqvdq" method="POST">
+            <textarea name="review" placeholder="Type your review here..." required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+
+    <!-- JavaScript to load header.html -->
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
 
 </body>
 </html>
-<!--#include virtual="/footer.html" -->
