@@ -37,13 +37,13 @@ h1{
 	color: white;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
 	cursor: pointer;
 	font-family: Bodoni, serif;
 	font-size: 1.5vw;
-	float: left;
 	padding-top: 5px;
 	padding-right: 2vw;
+	padding-left: 2vw;
+	padding-bottom: 5px;
 }
 
 .logo_button{
@@ -68,7 +68,11 @@ h1{
 	width: 90%;
 	margin-left: 5%;
 	margin-bottom: 2%;
-	background-color: gray;
+	background-color: white; /* Box background */
+    border: 2px solid black; /* Border around the box */
+    padding: 20px; /* Adds space inside the box */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a drop shadow */
+    border-radius: 10px; /* Rounds the corners */
 }
 
 .athlete_container_right{
@@ -78,18 +82,36 @@ h1{
 	grid-column-gap: 3%;
 	width: 90%;
 	margin-left: 5%;
-	background-color: gray;
+	background-color: white; /* Box background */
+    border: 2px solid black; /* Border around the box */
+    padding: 20px; /* Adds space inside the box */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a drop shadow */
+    border-radius: 10px; /* Rounds the corners */
 }
 
+.container_paragraph{
+	display: grid;
+	grid-template-row: 5fr 7fr 1fr;
+	gap: 20px;
+}
+.container > div.buttons{
+	align: center;
+	padding-top:5.0vw
+	display: grid;
+	align-items:center;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+}
+.paragraph_text{
+	white-space: pre-line;
+	margin-right:5%;
+	color: black;
+	display:inline;
+}
 .athlete_photo{
 	aspect-ratio:1/1;
 	max-height:100%;
 	vertical-align:text-bottom;
-}
-
-.paragraph_text{
-	white-space: pre-line;
-	margin-right:5%
 }
 
 @media screen and (max-width: 600px){
@@ -147,23 +169,35 @@ h1{
 
 		-->
 		<div class="image-container" id="header-placeholder"></div>
+		<div style = "padding-top: 100px;"></div>
 		<h1>
 		Our Athletes
 		</h1>
-		<div class="athlete_container">
+		<div class="athlete_container" >
 		<a href="athlete_pages/amos_aguilera.html">
 			<img src="athlete_pages/athlete_data/amos_aguilera/amos_image.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
 		</a>
-		<div id="amos_intro" class="paragraph_text"> Name: Amos Aguilera
+		<div class="container_paragraph">
+			<p class="paragraph_text" style = "font-size: 20px">
+			Name: Amos Aguilera
+			</p>
+			<p id="Amos Aguilera intro" class="paragraph_text" style = "font-size: 15px"> Name: Amos Aguilera
 			Document Failed to Load
+			</p>
+			<div class = "buttons">
+				<a href="athlete_pages/amos_aguilera.html">
+					<button class="header_button" >Find out more!</button>
+				</a>
+				<a href="contact.html">
+					<button class="header_button" >Get in touch!</button>
+				</a>
+			</div>
 		</div>
 		</div>
 
 		<div class="athlete_container_right">
-		<div id="second_athlete_info" class="paragraph_text" style = "margin-left:5%;"> Name: Amos Aguilera
-			<!-- Sport: Jurupa Hills High School
-			Story:Amos Aguilera is a 6'1", 170-pound first baseman from Fontana, CA, with a tall, projectable frame and room to add strength. A multi-sport athlete competing in basketball and wrestling, he brings athleticism, coordination, and toughness to the baseball field. Defensively, he has soft hands, solid footwork, and a strong feel for the glove, making him a reliable presence at first base. His short arm action leads to accurate throws, and with further development—particularly by driving through his target—he can add more velocity.
-			-->Document failed to load
+		<div id="Second Athlete intro" class="paragraph_text" style = "margin-left:5%;"> Name: Amos Aguilera
+			Document failed to load
 		</div>
 		<a href="athlete_pages/amos_aguilera.html">
 			<img src="athlete_pages/athlete_data/amos_aguilera/amos_image.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
@@ -187,33 +221,24 @@ h1{
 
 
 function load_data(name,Id_ref){
-    fetch("http://localhost:3000/athlete_data?name=" + name + "&need=intro", {
+    fetch("http://localhost:3000/athlete_data?name=" + name + "&need=intro&table=athletes", {
         method: 'GET',
         })
-        .then((response) => {
-            if (!response.ok){
-                console.log("I hate everything");
-                console.log(response.ok);
-            }
-            return response.text();
-        })
-        .then((text) => {
+        .then((response) => response.json())
+        .then((data) => {
             console.log("I got something");
-            console.log(text);
-            document.getElementById(Id_ref).innerHTML = text;})
+            console.log(data[0].intro);
+            document.getElementById(name + " " + Id_ref).innerHTML = data[0].intro;})
         .catch(error => {
             console.error("you messed up", error);
         });
 };
 window.onload = function() {
-load_data("amos_aguilera","amos_intro");
+load_data("Amos Aguilera","intro");
 };
 		</script>
 		
-		
-		
-		<input type="file" id="fileInput" />
-<div id="fileInfo"></div>
+
 	</main>
 </body>
 </html>
