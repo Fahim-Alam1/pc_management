@@ -65,6 +65,26 @@
 		<p id="Amos_athletic_testing">Athletic Testing</p>
 	</div>
 </div>
+<div class="athlete_dropdown">
+	<button class ="athlete_drop_button">Second Athlete</button>
+	<div class="dropdown-content">
+		<p id= "Second_Intro">Intro</p>
+		<p id="Second_school">School</p>
+		<p id="Second_weight">Weight</p>
+		<p id="Second_hometown">Hometown</p>
+		<p id="Second_class">Class</p>
+		<p id="Second_height">Height</p>
+		<p id="Second_interests">Interests</p>
+		<p id="Second_sport">Sport</p>
+		<p id="Second_positional_profile">Positional_profile</p>
+		<p id="Second_body">Body</p>
+		<p id="Second_hit">Hit</p>
+		<p id="Second_power">Power</p>
+		<p id="Second_arm">Arm</p>
+		<p id="Second_defense">Defense</p>
+		<p id="Second_athletic_testing">Athletic Testing</p>
+	</div>
+</div>
 <textarea class = "text_editor" id = "txt_edit" ></textarea>
 <button class = "save_button" id = "save_button">Save</button>
 <div> Save status <span id="status"></span></div>
@@ -163,6 +183,108 @@
 		table = "athletes";
 		load_data(name,need,table)
 		};
+	document.getElementById("save_button").onclick = function() {
+		if(name && need && table){
+		save_data(name,need,table)
+		}
+		};
+
+
+document.getElementById("Second_Intro").onclick = function() {
+		name = "Second Athlete";
+		need = "intro";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_school").onclick = function() {
+		name = "Second Athlete";
+		need = "school";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_weight").onclick = function() {
+		name = "Second Athlete";
+		need = "weight";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_hometown").onclick = function() {
+		name = "Second Athlete";
+		need = "hometown";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_class").onclick = function() {
+		name = "Second Athlete";
+		need = "class";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_height").onclick = function() {
+		name = "Second Athlete";
+		need = "height";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_interests").onclick = function() {
+		name = "Second Athlete";
+		need = "interests";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_sport").onclick = function() {
+		name = "Second Athlete";
+		need = "sport";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_positional_profile").onclick = function() {
+		name = "Second Athlete";
+		need = "positional_profile";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_body").onclick = function() {
+		name = "Second Athlete";
+		need = "body";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_hit").onclick = function() {
+		name = "Second Athlete";
+		need = "hit";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_power").onclick = function() {
+		name = "Second Athlete";
+		need = "power";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_arm").onclick = function() {
+		name = "Second Athlete";
+		need = "arm";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_defense").onclick = function() {
+		name = "Second Athlete";
+		need = "defense";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_athletic_testing").onclick = function() {
+		name = "Second Athlete";
+		need = "athletic_testing";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+
+
+
+
+
 	document.getElementById("save_button").onclick = function() {
 		if(name && need && table){
 		save_data(name,need,table)

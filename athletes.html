@@ -109,9 +109,84 @@ h1{
 	display:inline;
 }
 .athlete_photo{
-	aspect-ratio:1/1;
-	max-height:100%;
+	object-fit:cover;
+	max-width:30vw;
+	min-width:30vw;
+	max-height:60vh;
+	min-height:60vh;
 	vertical-align:text-bottom;
+}
+
+        .footer {
+            background-color: black;
+            padding: 30px 50px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-icons img {
+            width: 24px; /* Adjust icon size */
+            height: 24px;
+        }
+.call_button{
+	margin-left: 35vw;
+	min-width:33vw;
+	background-color: #191919;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: Bodoni, serif;
+	font-size: 4vw;
+	padding-top: 5px;
+	padding-right: 2vw;
+	padding-left: 2vw;
+	padding-bottom: 5px;
 }
 
 @media screen and (max-width: 600px){
@@ -173,6 +248,8 @@ h1{
 		<h1>
 		Our Athletes
 		</h1>
+
+		<!--First Athlete Box -->
 		<div class="athlete_container" >
 		<a href="athlete_pages/amos_aguilera.html">
 			<img src="athlete_pages/athlete_data/amos_aguilera/amos_image.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
@@ -195,17 +272,80 @@ h1{
 		</div>
 		</div>
 
+		<!--Second Athlete Box -->
 		<div class="athlete_container_right">
-		<div id="Second Athlete intro" class="paragraph_text" style = "margin-left:5%;"> Name: Amos Aguilera
-			Document failed to load
-		</div>
-		<a href="athlete_pages/amos_aguilera.html">
-			<img src="athlete_pages/athlete_data/amos_aguilera/amos_image.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
+			<div class="container_paragraph">
+				<p class="paragraph_text" style = "font-size: 20px">
+					Name: Second Athlete
+				</p>
+				<p id="Second Athlete intro" class="paragraph_text" style = "font-size: 15px">
+					Document Failed to Load
+				</p>
+				<div class = "buttons">
+					<a href="athlete_pages/second_athlete.html">
+						<button class="header_button" >Find out more!</button>
+					</a>
+					<a href="contact.html">
+						<button class="header_button" >Get in touch!</button>
+					</a>
+				</div>
+			</div>
+		<a href="athlete_pages/second_athlete.html">
+			<img src="athlete_pages/athlete_data/second_athlete/second_image_3.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
 		</a>
 		</div>
-		
-		
-		
+		<div style = "padding-top: 5vh;"></div>
+
+		<a href="../contact.html">
+			<button class="call_button" >Join our athletes!</button>
+		</a>
+
+		<!--Spacing for footer-->
+		<div style = "padding-top: 10vh;"></div>
+
+		<!--Footer-->
+		<div class="footer">
+			<div class="footer-section">
+				<img src="main_logo.JPG" alt="Logo" width="90">
+				<div class="social-icons">
+					<img src="twitter_icon.png" alt="Twitter"> <a href="#">Social Media Link</a>
+				</div>
+				<div class="social-icons">
+					<img src="phone_icon.png" alt="Phone"> <a href="#">Social Media Link 2</a>
+				</div>
+			</div>
+
+			<div class="footer-section">
+				<h3>Menu</h3>
+				<ul>
+					<li><a href="athletes.html">Athletes</a></li>
+					<li><a href="services.html">Service</a></li>
+					<li><a href="testimonials.html">Testimonial</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-section">
+				<h3>About</h3>
+				<ul>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="privacy.html">Privacy</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-section">
+				<h3>Contact Information</h3>
+				<p>Business Email</p>
+				<p>Business Address</p>
+				<p>City, State, Zip</p>
+			</div>
+
+			<div class="copyright">
+				Copyright & Privacy information for the company if needed
+			</div>
+		</div>
+
+
 		<script>
 			fetch('./header.html')
     		.then(response => response.text())
@@ -235,6 +375,7 @@ function load_data(name,Id_ref){
 };
 window.onload = function() {
 load_data("Amos Aguilera","intro");
+load_data("Second Athlete","intro");
 };
 		</script>
 		
