@@ -15,16 +15,59 @@ body{
 	line-height: 1.5;
 }
 
-.header {
-	position: sticky;
-	top: 0;
-	padding: 10px 20px 25px;
-	background: #191919;
-	color: #f1f1f1;
-	margin: 0;
-	font-family: Bodoni, serif;
-	font-weight: bold;
-}
+    .image-container {
+        background-color: black;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-sizing: border-box;
+        border-radius: 0 0 15px 15px;
+        width: 100%;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .header-content img {
+        margin-left: 20px;
+    }
+
+    .header-content nav {
+        margin-left: auto;
+    }
+
+    .header-content nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .header-content nav ul li {
+        margin: 0 15px;
+    }
+
+    .header-content nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
 
 h1{
 	color: black;
@@ -68,111 +111,265 @@ h2{
 .stats{
 	border: none;
 	color: black;
-	white-space: pre-line;
 	margin-left: 5%;
 	display: grid;
 	align-items:center;
 	grid-template-columns: 1fr 1fr;
 	gird-template-rows:1fr 3fr;
 	grid-column-gap: 3%;
+	background-color: white; /* Box background */
+    border: 2px solid black; /* Border around the box */
+    padding: 20px; /* Adds space inside the box */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a drop shadow */
+    border-radius: 10px; /* Rounds the corners */
 }
 
 .athlete_photo{
-	margin-right: 5%;
-	aspect-ratio:1/1;
-	max-height:100%;
+margin-right: 5%;
+	object-fit:cover;
+	min-width:33vw;
+	max-width:33vw;
+	max-height:60vh;
 	vertical-align:text-bottom;
+	align-items:center;
 }
+.call_button{
+	min-width:33vw;
+	background-color: #191919;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: Bodoni, serif;
+	font-size: 4vw;
+	padding-top: 5px;
+	padding-right: 2vw;
+	padding-left: 2vw;
+	padding-bottom: 5px;
+}
+.highlight_video{
+	object-fit:cover;
+	min-width:60vw;
+	max-width:60vw;
+	max-height:70vh;
+}
+.mini_highlight_video{
+	object-fit:cover;
+	min-width:20vw;
+	max-width:20vw;
+	max-height:23vh;
+}
+
+        .footer {
+            background-color: black;
+            padding: 30px 50px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-icons img {
+            width: 24px; /* Adjust icon size */
+            height: 24px;
+        }
+
 </style>
 </head>
 <body>
 	<main>
-		<div class="header">
-			<div class="content-width">
-				<div class="header">
-					<a href="../index.html">
-						<button class="logo_button">
-							<img src="..\main_logo.JPG" alt="Logo" width="40">
-						</button>
-					</a>
-					<a href="../athletes.html">
-						<button class="header_button">
-							Athletes
-						</button>
-					</a>
-					<a href="../about.html">
-						<button class="header_button">
-							About
-						</button>
-					</a>
-					<a href="../services.html">
-						<button class="header_button">
-							Services
-						</button>
-					</a>
-					<a href="../testimonials.html">
-						<button class="header_button">
-							Testimonials
-						</button>
-					</a>	
-					<a href="../contact.html">
-						<button class="header_button">
-							Contact
-						</button>
-					</a>
-					<a href="../privacy.html">
-						<button class="header_button">
-							Privacy
-						</button>
-					</a>
-				</div>
+		<div class="image-container">
+			<div class="header-content">
+				<a href="index.html">
+					<img src="../main_logo.JPG" alt="Logo" width="90">
+				</a>
+
+				<!--    <button class="menu-toggle" onclick="toggleMenu()">☰</button>-->
+
+				<nav>
+					<ul>
+						<!--            <li><a href="index.html">Home</a></li>-->
+						<li><a href="../athletes.html">Athletes</a></li>
+						<li><a href="../testimonials.html">Testimonial</a></li>
+						<li><a href="../contact.html">Contact</a></li>
+						<li><a href="../services.html">Services</a></li>
+						<li><a href="../about.html">About</a></li>
+						<li><a href="../privacy.html">Privacy</a></li>
+					</ul>
+				</nav>
 			</div>
 		</div>
+		<div style = "padding-top: 100px;"></div>
 		<h1>
 		Amos Aguilera
 		</h1>
-		<div style = "display: grid;align-items:center;	grid-template-columns: 3fr 1fr;	grid-column-gap: 3%;">
+		<div style = "margin: auto; display: grid;align-items:center;	grid-template-columns: 3fr 1fr;	grid-column-gap: 3%; width:95vw;">
 		<div class = "stats">
 		<div style = "display: in-line; font-size: 2vw;">Details</div>
 		<div style = "display: in-line; font-size: 2vw;">Stats</div>
-		<div style = "align-self: start; font-size: 1.25vw;">
-		School: Jurupa Hills High School
-		Weight: 200 lbs
-		Hometown: Fontana, CA
-		Class: Junior (2026)
-		Height: 6'4
-		Interests: Christian/ Believes in the lord,
-		Fitness, WWE, Recovery & Wellness
-		Sport: Baseball/Basketball/Wrestling
-		Social Media:
-			IG: <a href = "https://www.instagram.com/famous__amos00?igsh=NTc4MTIwNjQ2YQ==" style = "text-decoration: none;">famous___amos00 </a>
+		<div style = "align-self: start; font-size: 1.25vw;" id="player_details">
+		School: <span id="school"></span>
+		Weight: <span id="weight"></span>
+		Hometown: <span id="hometown"></span>
+		Class: <span id="class"></span>
+		Height: <span id="height"></span>
+		Interests: <span id="interests"></span>
+		Sport: <span id="sport"></span>
+		Social Media:&#10;
+		IG: <a href = "https://www.instagram.com/famous__amos00?igsh=NTc4MTIwNjQ2YQ==" style = "text-decoration: none;">famous___amos00 </a>
 		</div>
 		<div style = "align-self: start; font-size: 1.25vw;">
-		Positional Profile: 1B
-		Body: 6-3, 200 pounds. Strong frame with present strength.
-		Hit: RHH. Slightly open stance that evens out when he strides. Hands rest away from
-		back shoulder. Higher launch angle that produces a lot of fly balls. 64.3 mph bat
-		speed with 12g of rotational acceleration.
-		Power: 89 mph max exit velocity (78 avg.); 339-foot max batted distance.
-		Consistently pulls the ball.
-		Arm: RH. INF - 71.00 mph. Side arm release across the infield.
-		Defense: Calm footwork through the play.
-		Athletic Testing: 7.55 runner in the 60-yard dash; Long, tall strides.
+		Positional Profile: <span id="positional_profile"></span>
+		Body: <span id="body"></span>
+		Hit: <span id="hit"></span>
+		Power: <span id="power"></span>
+		Arm: <span id="arm"></span>
+		Defense: <span id="defense"></span>
+		Athletic Testing: <span id="athletic_testing"></span>
 		</div>
 		</div>
-		<div class = "athlete_photo">
-				<img src="athlete_data/amos_aguilera/amos_image.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
+		<div>
+				<img src="athlete_data/amos_aguilera/amos_image_2.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
+			<a href="../contact.html">
+				<button class="call_button" >Get in touch!</button>
+			</a>
 		</div>
 		</div>
 		<h2>Highlights</h2>
 		<div style = "margin-left: 5%; margin-right: 5%; display: grid;align-items:center;	grid-template-columns: 3fr 1fr;	grid-column-gap: 10%;">
-			<iframe style = "aspect-ratio:16/9;" src="https://www.youtube.com/embed/5wZ8CaPJlLs" width = "100%">
-			</iframe>
+			<video class ="highlight_video" controls autoplay loop>
+				<source src="athlete_data/amos_aguilera/amos_highlight_3.mp4" type="video/mp4">
+				Your browser does not support HTML video
+			</video>
 			<div>
-				<img src="athlete_data/amos_aguilera/amos_highlight_1.png" width="100%"/>
-				<img src="athlete_data/amos_aguilera/amos_highlight_2.png" width="100%"/>
-				<img src="athlete_data/amos_aguilera/amos_highlight_3.png" width="100%"/></div>
+				<video class ="mini_highlight_video" controls autoplay muted loop>
+					<source src="athlete_data/amos_aguilera/amos_highlight_1.mp4" >
+				</video>
+				<video class ="mini_highlight_video" controls autoplay muted loop>
+					<source src="athlete_data/amos_aguilera/amos_highlight_2.mp4" >
+				</video>
+				<video class ="mini_highlight_video" controls autoplay muted loop>
+					<source src="athlete_data/amos_aguilera/amos_highlight_4.mp4" >
+				</video>
+			</div>
 		</div>
+
+
+
+
+		<span id="name"></span><span id="intro"></span>
+		<div style = "padding-top: 10vh;"></div>
+		<div class="footer">
+			<div class="footer-section">
+				<img src="../main_logo.JPG" alt="Logo" width="90">
+				<div class="social-icons">
+					<img src="../twitter_icon.png" alt="Twitter"> <a href="#">Social Media Link</a>
+				</div>
+				<div class="social-icons">
+					<img src="../phone_icon.png" alt="Phone"> <a href="#">Social Media Link 2</a>
+				</div>
+			</div>
+
+			<div class="footer-section">
+				<h3>Menu</h3>
+				<ul>
+					<li><a href="../athletes.html">Athletes</a></li>
+					<li><a href="../services.html">Service</a></li>
+					<li><a href="../testimonials.html">Testimonial</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-section">
+				<h3>About</h3>
+				<ul>
+					<li><a href="../about.html">About</a></li>
+					<li><a href="../contact.html">Contact</a></li>
+					<li><a href="../privacy.html">Privacy</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-section">
+				<h3>Contact Information</h3>
+				<p>Business Email</p>
+				<p>Business Address</p>
+				<p>City, State, Zip</p>
+			</div>
+
+			<div class="copyright">
+				Copyright & Privacy information for the company if needed
+			</div>
+		</div>
+
+		<script>
+
+	function load_data(name,Id_ref){
+        fetch("http://localhost:3000/athlete_data?name=" + name + /*"&need=" + Id_ref +*/"&table=athletes", {
+            method: 'GET',
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("I got something");
+                var obj = data[0]
+                for (var key in obj){
+                if(key=="name" || key=="intro"){
+                	continue;
+                }
+                document.getElementById(key).innerHTML = obj[key] + "<br>";
+                }
+                })
+            .catch(error => {
+                console.error("you messed up", error);
+            });
+    };
+    window.onload = function() {
+    load_data("Amos Aguilera","name");
+    };
+
+
+</script>
 	</main>
 </body>
 </html>

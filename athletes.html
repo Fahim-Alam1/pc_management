@@ -37,13 +37,13 @@ h1{
 	color: white;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
 	cursor: pointer;
 	font-family: Bodoni, serif;
 	font-size: 1.5vw;
-	float: left;
 	padding-top: 5px;
 	padding-right: 2vw;
+	padding-left: 2vw;
+	padding-bottom: 5px;
 }
 
 .logo_button{
@@ -68,7 +68,11 @@ h1{
 	width: 90%;
 	margin-left: 5%;
 	margin-bottom: 2%;
-	background-color: gray;
+	background-color: white; /* Box background */
+    border: 2px solid black; /* Border around the box */
+    padding: 20px; /* Adds space inside the box */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a drop shadow */
+    border-radius: 10px; /* Rounds the corners */
 }
 
 .athlete_container_right{
@@ -78,18 +82,111 @@ h1{
 	grid-column-gap: 3%;
 	width: 90%;
 	margin-left: 5%;
-	background-color: gray;
+	background-color: white; /* Box background */
+    border: 2px solid black; /* Border around the box */
+    padding: 20px; /* Adds space inside the box */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a drop shadow */
+    border-radius: 10px; /* Rounds the corners */
 }
 
+.container_paragraph{
+	display: grid;
+	grid-template-row: 5fr 7fr 1fr;
+	gap: 20px;
+}
+.container > div.buttons{
+	align: center;
+	padding-top:5.0vw
+	display: grid;
+	align-items:center;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+}
+.paragraph_text{
+	white-space: pre-line;
+	margin-right:5%;
+	color: black;
+	display:inline;
+}
 .athlete_photo{
-	aspect-ratio:1/1;
-	max-height:100%;
+	object-fit:cover;
+	max-width:30vw;
+	min-width:30vw;
+	max-height:60vh;
+	min-height:60vh;
 	vertical-align:text-bottom;
 }
 
-.paragraph_text{
-	white-space: pre-line;
-	margin-right:5%
+        .footer {
+            background-color: black;
+            padding: 30px 50px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-icons img {
+            width: 24px; /* Adjust icon size */
+            height: 24px;
+        }
+.call_button{
+	margin-left: 35vw;
+	min-width:33vw;
+	background-color: #191919;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: Bodoni, serif;
+	font-size: 4vw;
+	padding-top: 5px;
+	padding-right: 2vw;
+	padding-left: 2vw;
+	padding-bottom: 5px;
 }
 
 @media screen and (max-width: 600px){
@@ -147,31 +244,108 @@ h1{
 
 		-->
 		<div class="image-container" id="header-placeholder"></div>
+		<div style = "padding-top: 100px;"></div>
 		<h1>
 		Our Athletes
 		</h1>
-		<div class="athlete_container">
+
+		<!--First Athlete Box -->
+		<div class="athlete_container" >
 		<a href="athlete_pages/amos_aguilera.html">
 			<img src="athlete_pages/athlete_data/amos_aguilera/amos_image.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
 		</a>
-		<div id="amos_intro" class="paragraph_text"> Name: Amos Aguilera
+		<div class="container_paragraph">
+			<p class="paragraph_text" style = "font-size: 20px">
+			Name: Amos Aguilera
+			</p>
+			<p id="Amos Aguilera intro" class="paragraph_text" style = "font-size: 15px"> Name: Amos Aguilera
 			Document Failed to Load
+			</p>
+			<div class = "buttons">
+				<a href="athlete_pages/amos_aguilera.html">
+					<button class="header_button" >Find out more!</button>
+				</a>
+				<a href="contact.html">
+					<button class="header_button" >Get in touch!</button>
+				</a>
+			</div>
 		</div>
 		</div>
 
+		<!--Second Athlete Box -->
 		<div class="athlete_container_right">
-		<div id="second_athlete_info" class="paragraph_text" style = "margin-left:5%;"> Name: Amos Aguilera
-			<!-- Sport: Jurupa Hills High School
-			Story:Amos Aguilera is a 6'1", 170-pound first baseman from Fontana, CA, with a tall, projectable frame and room to add strength. A multi-sport athlete competing in basketball and wrestling, he brings athleticism, coordination, and toughness to the baseball field. Defensively, he has soft hands, solid footwork, and a strong feel for the glove, making him a reliable presence at first base. His short arm action leads to accurate throws, and with further development—particularly by driving through his target—he can add more velocity.
-			-->Document failed to load
-		</div>
-		<a href="athlete_pages/amos_aguilera.html">
-			<img src="athlete_pages/athlete_data/amos_aguilera/amos_image.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
+			<div class="container_paragraph">
+				<p class="paragraph_text" style = "font-size: 20px">
+					Name: Second Athlete
+				</p>
+				<p id="Second Athlete intro" class="paragraph_text" style = "font-size: 15px">
+					Document Failed to Load
+				</p>
+				<div class = "buttons">
+					<a href="athlete_pages/second_athlete.html">
+						<button class="header_button" >Find out more!</button>
+					</a>
+					<a href="contact.html">
+						<button class="header_button" >Get in touch!</button>
+					</a>
+				</div>
+			</div>
+		<a href="athlete_pages/second_athlete.html">
+			<img src="athlete_pages/athlete_data/second_athlete/second_image_3.png" alt="Picture of Amos Aguilera" class ="athlete_photo">
 		</a>
 		</div>
-		
-		
-		
+		<div style = "padding-top: 5vh;"></div>
+
+		<a href="../contact.html">
+			<button class="call_button" >Join our athletes!</button>
+		</a>
+
+		<!--Spacing for footer-->
+		<div style = "padding-top: 10vh;"></div>
+
+		<!--Footer-->
+		<div class="footer">
+			<div class="footer-section">
+				<img src="main_logo.JPG" alt="Logo" width="90">
+				<div class="social-icons">
+					<img src="twitter_icon.png" alt="Twitter"> <a href="#">Social Media Link</a>
+				</div>
+				<div class="social-icons">
+					<img src="phone_icon.png" alt="Phone"> <a href="#">Social Media Link 2</a>
+				</div>
+			</div>
+
+			<div class="footer-section">
+				<h3>Menu</h3>
+				<ul>
+					<li><a href="athletes.html">Athletes</a></li>
+					<li><a href="services.html">Service</a></li>
+					<li><a href="testimonials.html">Testimonial</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-section">
+				<h3>About</h3>
+				<ul>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="privacy.html">Privacy</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-section">
+				<h3>Contact Information</h3>
+				<p>Business Email</p>
+				<p>Business Address</p>
+				<p>City, State, Zip</p>
+			</div>
+
+			<div class="copyright">
+				Copyright & Privacy information for the company if needed
+			</div>
+		</div>
+
+
 		<script>
 			fetch('./header.html')
     		.then(response => response.text())
@@ -187,33 +361,25 @@ h1{
 
 
 function load_data(name,Id_ref){
-    fetch("http://localhost:3000/athlete_data?name=" + name + "&need=intro", {
+    fetch("http://localhost:3000/athlete_data?name=" + name + "&need=intro&table=athletes", {
         method: 'GET',
         })
-        .then((response) => {
-            if (!response.ok){
-                console.log("I hate everything");
-                console.log(response.ok);
-            }
-            return response.text();
-        })
-        .then((text) => {
+        .then((response) => response.json())
+        .then((data) => {
             console.log("I got something");
-            console.log(text);
-            document.getElementById(Id_ref).innerHTML = text;})
+            console.log(data[0].intro);
+            document.getElementById(name + " " + Id_ref).innerHTML = data[0].intro;})
         .catch(error => {
             console.error("you messed up", error);
         });
 };
 window.onload = function() {
-load_data("amos_aguilera","amos_intro");
+load_data("Amos Aguilera","intro");
+load_data("Second Athlete","intro");
 };
 		</script>
 		
-		
-		
-		<input type="file" id="fileInput" />
-<div id="fileInfo"></div>
+
 	</main>
 </body>
 </html>

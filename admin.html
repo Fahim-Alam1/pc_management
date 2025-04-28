@@ -49,57 +49,281 @@
 	<button class ="athlete_drop_button">Amos Aguilera</button>
 	<div class="dropdown-content">
 		<p id= "Amos_Intro">Intro</p>
-		<p id= "Stats">Stats</p>
+		<p id="Amos_school">School</p>
+		<p id="Amos_weight">Weight</p>
+		<p id="Amos_hometown">Hometown</p>
+		<p id="Amos_class">Class</p>
+		<p id="Amos_height">Height</p>
+		<p id="Amos_interests">Interests</p>
+		<p id="Amos_sport">Sport</p>
+		<p id="Amos_positional_profile">Positional_profile</p>
+		<p id="Amos_body">Body</p>
+		<p id="Amos_hit">Hit</p>
+		<p id="Amos_power">Power</p>
+		<p id="Amos_arm">Arm</p>
+		<p id="Amos_defense">Defense</p>
+		<p id="Amos_athletic_testing">Athletic Testing</p>
+	</div>
+</div>
+<div class="athlete_dropdown">
+	<button class ="athlete_drop_button">Second Athlete</button>
+	<div class="dropdown-content">
+		<p id= "Second_Intro">Intro</p>
+		<p id="Second_school">School</p>
+		<p id="Second_weight">Weight</p>
+		<p id="Second_hometown">Hometown</p>
+		<p id="Second_class">Class</p>
+		<p id="Second_height">Height</p>
+		<p id="Second_interests">Interests</p>
+		<p id="Second_sport">Sport</p>
+		<p id="Second_positional_profile">Positional_profile</p>
+		<p id="Second_body">Body</p>
+		<p id="Second_hit">Hit</p>
+		<p id="Second_power">Power</p>
+		<p id="Second_arm">Arm</p>
+		<p id="Second_defense">Defense</p>
+		<p id="Second_athletic_testing">Athletic Testing</p>
 	</div>
 </div>
 <textarea class = "text_editor" id = "txt_edit" ></textarea>
 <button class = "save_button" id = "save_button">Save</button>
+<div> Save status <span id="status"></span></div>
 <script>
 	var name = '';
 	var need = '';
+	var table = '';
 	let save_location = "";
 	document.getElementById("Amos_Intro").onclick = function() {
-		name = "amos_aguilera";
-		need = "intro"
-		load_data(name,need)
+		name = "Amos Aguilera";
+		need = "intro";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_school").onclick = function() {
+		name = "Amos Aguilera";
+		need = "school";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_weight").onclick = function() {
+		name = "Amos Aguilera";
+		need = "weight";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_hometown").onclick = function() {
+		name = "Amos Aguilera";
+		need = "hometown";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_class").onclick = function() {
+		name = "Amos Aguilera";
+		need = "class";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_height").onclick = function() {
+		name = "Amos Aguilera";
+		need = "height";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_interests").onclick = function() {
+		name = "Amos Aguilera";
+		need = "interests";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_sport").onclick = function() {
+		name = "Amos Aguilera";
+		need = "sport";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_positional_profile").onclick = function() {
+		name = "Amos Aguilera";
+		need = "positional_profile";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_body").onclick = function() {
+		name = "Amos Aguilera";
+		need = "body";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_hit").onclick = function() {
+		name = "Amos Aguilera";
+		need = "hit";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_power").onclick = function() {
+		name = "Amos Aguilera";
+		need = "power";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_arm").onclick = function() {
+		name = "Amos Aguilera";
+		need = "arm";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_defense").onclick = function() {
+		name = "Amos Aguilera";
+		need = "defense";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Amos_athletic_testing").onclick = function() {
+		name = "Amos Aguilera";
+		need = "athletic_testing";
+		table = "athletes";
+		load_data(name,need,table)
 		};
 	document.getElementById("save_button").onclick = function() {
-		save_data(name,need)
+		if(name && need && table){
+		save_data(name,need,table)
+		}
 		};
 
-	function load_data(name,need){
-			fetch("http://localhost:3000/athlete_data?name=" + name + "&need=" + need, {
-				method: 'GET',
-				})
-				.then((response) => {
-					if (!response.ok){
-						console.log("I hate everything");
-						console.log(response.ok);
-					}
-					return response.text();
-				})
-				.then((text) => {
-					console.log("I got something");
-					console.log(text);
-					document.getElementById("txt_edit").value = text;})
-				.catch(error => {
-					console.error("you messed up", error);
-				});
-	};
 
-	function save_data(name,need){
+document.getElementById("Second_Intro").onclick = function() {
+		name = "Second Athlete";
+		need = "intro";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_school").onclick = function() {
+		name = "Second Athlete";
+		need = "school";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_weight").onclick = function() {
+		name = "Second Athlete";
+		need = "weight";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_hometown").onclick = function() {
+		name = "Second Athlete";
+		need = "hometown";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_class").onclick = function() {
+		name = "Second Athlete";
+		need = "class";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_height").onclick = function() {
+		name = "Second Athlete";
+		need = "height";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_interests").onclick = function() {
+		name = "Second Athlete";
+		need = "interests";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_sport").onclick = function() {
+		name = "Second Athlete";
+		need = "sport";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_positional_profile").onclick = function() {
+		name = "Second Athlete";
+		need = "positional_profile";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_body").onclick = function() {
+		name = "Second Athlete";
+		need = "body";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_hit").onclick = function() {
+		name = "Second Athlete";
+		need = "hit";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_power").onclick = function() {
+		name = "Second Athlete";
+		need = "power";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_arm").onclick = function() {
+		name = "Second Athlete";
+		need = "arm";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_defense").onclick = function() {
+		name = "Second Athlete";
+		need = "defense";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+	document.getElementById("Second_athletic_testing").onclick = function() {
+		name = "Second Athlete";
+		need = "athletic_testing";
+		table = "athletes";
+		load_data(name,need,table)
+		};
+
+
+
+
+
+	document.getElementById("save_button").onclick = function() {
+		if(name && need && table){
+		save_data(name,need,table)
+		}
+		};
+
+	function load_data(name,Id_ref,table){
+        fetch("http://localhost:3000/athlete_data?name=" + name + "&need=" + Id_ref + "&table=" + table, {
+            method: 'GET',
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("I got something");
+                var obj = data[0]
+                for (var key in obj){
+                document.getElementById("txt_edit").value = obj[key];
+                }
+                })
+            .catch(error => {
+                console.error("you messed up", error);
+            });
+    };
+
+	function save_data(name,need,table){
 			var text_to_save = document.getElementById("txt_edit").value;
-			fetch("http://localhost:3000/athlete_data?name=" + name + "&need=" + need, {
+			fetch("http://localhost:3000/athlete_data?name=" + name + "&need=" + need + "&table=" + table, {
 				method: 'POST',
 				headers: {
                     "Content-Type": "application/json",
                 },
 				body: JSON.stringify({
-					info: text_to_save
+					need: text_to_save
 					})
 				})
 				.then((response) => response.text())
-        		.then((text) => console.log(text));
+        		.then((text) => {
+        		console.log(text);
+        		document.getElementById("status").innerHTML = text;
+        		});
 	};
 
 </script>
