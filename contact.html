@@ -1,4 +1,6 @@
 <!--#include virtual="/header.html" -->
+<h1 style="margin-top: 50px; font-size: 50px;">Connect with our Team</h1>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,6 +74,35 @@
             width: 24px; /* Adjust icon size */
             height: 24px;
         }
+        .side-contact-info {
+            position: absolute;
+            bottom: 100px; /* Adjust as needed */
+            right: 80px;   /* Adjust as needed */
+            background-color: #fff;
+            padding: 15px 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .side-contact-info .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .side-contact-info a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .side-contact-info a:hover {
+            text-decoration: underline;
+        }
+
         /* textbox placement/styling*/
         .text-box {
             background-color: white; /* Box background */
@@ -121,13 +152,16 @@
             margin: 50px auto;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            font-size: 28px;
-            margin-bottom: 50px;
+            font-size: 50px;
+            margin-bottom: 20px; /* Less gap under heading */
+            margin-top: 50px;    /* Good gap from header.html */
         }
+
+
 
         input, textarea {
             width: 90%;
@@ -170,6 +204,7 @@
 </head>
 
 <body>
+
 <!--
 <div class="header">
 
@@ -186,20 +221,52 @@
     </div>
 </div>
 -->
-
-<h1> Connect with Our </h1>
 <h1>Connect with our Team</h1>
 
-<div class="contact-container">
-    <h2>Get in Touch with Us</h2>
-    <form action="https://formspree.io/f/mzzdnwqn" method="POST">
-        <input type="text" name="name" placeholder="Insert name here" required>
-        <input type="email" name="email" placeholder="Insert email here" required>
-        <input type="text" name="subject" placeholder="Subject" required>
-        <textarea name="message" placeholder="Submit Your Message Request" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+<div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 30px;">
+
+    <!-- Contact Form -->
+    <div class="contact-container">
+        <h2>Get in Touch with Us</h2>
+        <form action="https://formspree.io/f/mzzdnwqn" method="POST">
+            <input type="text" name="name" placeholder="Insert name here" required>
+            <input type="email" name="email" placeholder="Insert email here" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Submit Your Message Request" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Side Contact Info Box -->
+    <div class="side-contact-info">
+        <div class="info-item">
+            <img src="email-icon.png" alt="Email" width="22" height="22">
+            <a href="mailto:contact@yourdomain.com">contact@yourdomain.com</a>
+        </div>
+        <div class="info-item">
+            <img src="phone_icon.png" alt="Phone" width="22" height="22">
+            <a href="tel:1234567890">(123) 456-7890</a>
+        </div>
+    </div>
+
 </div>
+
+
+    <!-- Side Contact Info -->
+    <div class="side-contact-info">
+        <div class="info-item">
+            <img src="email-icon.png" alt="Email" width="22" height="22">
+            <a href="mailto:contact@yourdomain.com">contact@yourdomain.com</a>
+        </div>
+        <div class="info-item">
+            <img src="phone_icon.png" alt="Phone" width="22" height="22">
+            <a href="tel:1234567890">(123) 456-7890</a>
+        </div>
+    </div>
+
+</div>
+
+
 <!-- <div class="footer">
     <div class="contact-info">
         <img src="images/email-icon.png" alt="Example@gmail.com">
