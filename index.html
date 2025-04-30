@@ -17,18 +17,39 @@
         }
 
         .content h1 {
-            text-align: center;
+            text-align: Left;
             font-weight: Bold;
             font-family: "Bodoni", serif;
             font-size: 100px;
             text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+            padding-left: 50px;
+        }
+
+        .banner-title {
+            background-image: url('./Pictures/Banner.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 550px;
+            padding: 40px 0;
+            background-color: rgba(0, 0, 0, 0.4); /* dark overlay */
+            background-blend-mode: darken;
+            /*border-radius: 15px;*/
+            /*box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);*/
+            /*margin: 0 20px;*/
+        }
+        .banner-title h1 {
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
         }
 
         .content p {
-            text-align: center;
+            color: whitesmoke;
+            text-align: left;
             font-style: normal;
             font-family: "Lato", serif;
             font-size: larger;
+            padding-left: 50px;
         }
 
         .content h2{
@@ -37,91 +58,6 @@
             font-weight: bold;
             font-size: xxx-large;
         }
-
-        /*.header {*/
-        /*    position: sticky;*/
-        /*    top: 0;*/
-        /*    padding: 10px 20px 25px;*/
-        /*    background: #191919;*/
-        /*    color: #f1f1f1;*/
-        /*    margin: 0;*/
-        /*    font-family: "Bodoni", serif;*/
-        /*    font-weight: bold;*/
-        /*}*/
-
-        /*.header_button{*/
-        /*    background-color: #191919;*/
-        /*    border: none;*/
-        /*    color: white;*/
-        /*    text-align: center;*/
-        /*    text-decoration: none;*/
-        /*    display: inline-block;*/
-        /*    cursor: pointer;*/
-        /*    font-family: Bodoni, serif;*/
-        /*    font-size: 1.5vw;*/
-        /*    float: left;*/
-        /*    padding-top: 5px;*/
-        /*    padding-right: 2vw;*/
-        /*}*/
-
-        /*.image-container {*/
-        /*    background-color: black;*/
-        /*    padding: 10px 20px;*/
-        /*    display: flex;*/
-        /*    align-items: center; !* Vertically aligns items *!*/
-        /*    justify-content: space-between; !* Pushes logo left, menu right *!*/
-        /*    height: 100px; !* Adjust as needed *!*/
-        /*    position: fixed; !* Keeps it fixed at the top *!*/
-        /*    top: 0;*/
-        /*    left: 0;*/
-        /*    z-index: 1000; !* Ensures it stays above other content *!*/
-        /*    box-sizing: border-box;*/
-        /*    border-radius: 15px;*/
-        /*    width: 100%;*/
-        /*}*/
-
-        /*!* Pushes content down so it doesn’t overlap with fixed header *!*/
-        /*.content {*/
-        /*    padding-top: 100px; !* Adjust based on header height *!*/
-        /*}*/
-
-        /*.header-content {*/
-        /*    display: flex;*/
-        /*    align-items: center;*/
-        /*    justify-content: space-between;*/
-        /*    width: 100%;*/
-        /*}*/
-
-        /*.header-content img {*/
-        /*    margin-left: 20px; !* Adds spacing for the logo *!*/
-        /*}*/
-
-        /*.header-content nav {*/
-        /*    margin-left: auto; !* Pushes nav menu to the right *!*/
-        /*}*/
-
-        /*.header-content nav ul {*/
-        /*    list-style: none;*/
-        /*    padding: 0;*/
-        /*    margin: 0;*/
-        /*    display: flex;*/
-        /*    align-items: center;*/
-        /*    height: 100%;*/
-        /*}*/
-
-        /*.header-content nav ul li {*/
-        /*    margin: 0 15px;*/
-        /*}*/
-
-        /*.header-content nav ul li a {*/
-        /*    color: white;*/
-        /*    text-decoration: none;*/
-        /*    font-size: 16px;*/
-        /*    font-weight: bold;*/
-        /*    display: flex;*/
-        /*    align-items: center;*/
-        /*    height: 100%;*/
-        /*}*/
 
         .footer {
             background-color: black;
@@ -179,24 +115,50 @@
             height: 24px;
         }
 
-        .text-box {
-            background-color: white; /* Box background */
-            border: 2px solid black; /* Border around the box */
-            padding: 20px; /* Adds space inside the box */
+        /* .text-box {
+            background-color: white;
+            border: 2px solid black;
+            padding: 20px;
             margin: 20px auto;
-            width: 50%; /* Adjust width as needed */
-            max-width: 700px; /* Limits max width */
-            text-align: center; /* Centers the text */
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a drop shadow */
-            border-radius: 10px; /* Rounds the corners */
+            width: 90%;
+            max-width: none;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
             font-family: "Lato", serif;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .vertical-line {
+            width: 2px;
+            height: 100%;
+            background-color: black;
+            min-height: 200px;
+            display: inline-block;
+        } */
+
+        .text-box-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 60px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            background-blend-mode: darken;
+            margin: 40px auto;
+            /*width: 100%;*/
         }
 
-        .text-box h2 {
-            text-align: center;
-            font-family: Georgia, serif;
+        .grid-column h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
             font-weight: bold;
-            font-style: normal;
+        }
+
+        .grid-column p {
+            font-size: 20px;
+            line-height: 1.5;
         }
     </style>
     <title>Home</title>
@@ -204,36 +166,37 @@
 
 <body>
 
-    <div class="image-container" id="header-placeholder">
-        <!-- Header will be loaded here -->
-<!--        <img src="main_logo.JPG" alt="Logo" width="90">-->
-<!--        <nav>-->
-<!--            <ul>-->
-<!--                <li><a href="index.html">Home</a></li>-->
-<!--                <li><a href="about.html">About</a></li>-->
-<!--                <li><a href="athletes.html">Athletes</a></li>-->
-<!--                <li><a href="contact.html">Contact</a></li>-->
-<!--                <li><a href="privacy.html">Privacy</a></li>-->
-<!--                <li><a href="services.html">Services</a></li>-->
-<!--                <li><a href="testimonials.html">Testimonial</a></li>-->
-<!--            </ul>-->
-<!--        </nav>-->
-    </div>
+    <div class="image-container" id="header-placeholder"></div>
 
     <div class="content">
-        <h1>Welcome to the Player Club Management</h1>
-        <p>Unlock your full potential in the NIL space with a team that puts athletes first. Whether you're a student-athlete looking to maximize your brand or a business searching for top-tier athlete partnerships, we're here
-            to connect you to the right opportunities.</p>
+        <div class="banner-title">
+            <h1>Welcome to the </br>Player Club Management</h1>
+            <p>Unlock your full potential in the NIL space with a team that puts athletes first.</br>Whether you're a student-athlete looking to maximize your brand or a business</br>searching for top-tier athlete partnerships, we're here
+                to connect you to the right opportunities.</p>
+        </div>
+<!--        <h1>Welcome to the Player Club Management</h1>-->
+<!--        <p>Unlock your full potential in the NIL space with a team that puts athletes first. Whether you're a student-athlete looking to maximize your brand or a business searching for top-tier athlete partnerships, we're here-->
+<!--            to connect you to the right opportunities.</p>-->
 <!--       <p style="height: 1500px;">This is a long page to test scrolling.</p>-->
     </div>
 
-    <div class="text-box">
-        <h2>Why choose us?</h2>
-        <p>Athlete-First Approach - We prioritize the long-term success and well-being of our athletes. </br>
-            Strategic Brand Partnerships - We connect student-athletes with companies that align with their values.</br>
-            Financial Growth & Education - We help athletes make informed decisions about their earnings.</br>
-            Marketing & Exposure - Our team ensures athletes get the visibility they deserve.
-        </p>
+    <div class="text-box-grid">
+      <div class="grid-column">
+        <h3>Athlete-First Approach</h3>
+        <p>We prioritize the long-term success and well-being of our athletes.</p>
+      </div>
+      <div class="grid-column">
+        <h3>Strategic Brand Partnerships</h3>
+        <p>We connect student-athletes with companies that align with their values.</p>
+      </div>
+      <div class="grid-column">
+        <h3>Financial Growth & Education</h3>
+        <p>We help athletes make informed decisions about their earnings.</p>
+      </div>
+      <div class="grid-column">
+        <h3>Marketing & Exposure</h3>
+        <p>Our team ensures athletes get the visibility they deserve.</p>
+      </div>
     </div>
 
     <!-- Footer Section -->
