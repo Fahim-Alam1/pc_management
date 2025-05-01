@@ -21,6 +21,7 @@
         /* Footer style */
         .footer {
             background-color: black;
+            color: white;
             padding: 30px 50px;
             text-align: left;
             display: flex;
@@ -62,6 +63,40 @@
             text-align: center;
             margin-top: 20px;
             font-size: 14px;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-icons img {
+            width: 24px; /* Adjust icon size */
+            height: 24px;
+        }
+
+        .text-box-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 60px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            background-blend-mode: darken;
+            margin: 40px auto;
+            /*width: 100%;*/
+        }
+
+        .grid-column h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .grid-column p {
+            font-size: 20px;
+            line-height: 1.5;
         }
 
         .social-icons {
@@ -259,48 +294,10 @@
     <!-- Header will be loaded here -->
     <div id="header"></div>
     <div class="image-container" id="header-placeholder"></div>
+
 <!-- Footer Section -->
-<div class="footer">
-    <div class="footer-section">
-        <img src="main_logo.JPG" alt="Logo" width="90">
-        <div class="social-icons">
-            <img src="twitter_icon.png" alt="Twitter"> <a href="#">Social Media Link</a>
-        </div>
-        <div class="social-icons">
-            <img src="phone_icon.png" alt="Phone"> <a href="#">Social Media Link 2</a>
-        </div>
-    </div>
 
-    <div class="footer-section">
-        <h3>Menu</h3>
-        <ul>
-            <li><a href="athletes.html">Athletes</a></li>
-            <li><a href="services.html">Service</a></li>
-            <li><a href="testimonials.html">Testimonial</a></li>
-        </ul>
-    </div>
-
-    <div class="footer-section">
-        <h3>About</h3>
-        <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
-        </ul>
-    </div>
-
-    <div class="footer-section">
-        <h3>Contact Information</h3>
-        <p>Business Email</p>
-        <p>Business Address</p>
-        <p>City, State, Zip</p>
-    </div>
-
-    <div class="copyright">
-        Copyright & Privacy information for the company if needed
-    </div>
-</div>
-
+<div id="footer-placeholder"></div>
 
     <!-- JavaScript to load header.html -->
     <script>
@@ -315,6 +312,19 @@
                 }, 100);
             })
             .catch(error => console.error("Error loading header:", error));
+
+        //Goes in script
+        fetch('./footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+
+                // Ensure styling applies after loading footer
+                setTimeout(() => {
+                    document.querySelector(".footer-content").classList.add("image-container");
+                }, 100);
+            })
+            .catch(error => console.error("Error loading footer:", error));
     </script>
 </body>
 </html>
