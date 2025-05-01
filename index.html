@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<title>Player Club Management | Home </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <head>
     <style>
         @font-face { font-family: Bodoni; src: url(./fonts/BodoniFLF-Roman.ttf);}
@@ -8,8 +11,7 @@
         body {
             background-color: #faeacd; /* Cream color */
             margin: auto;
-            padding: 0;
-            font-family: Bodoni, serif;
+            /*padding: 0;*/
         }
 
         .content {
@@ -20,7 +22,6 @@
         .content h1 {
             text-align: Left;
             font-weight: Bold;
-            /*font-family: "Bodoni", serif;*/
             font-size: 100px;
             text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
             padding-left: 50px;
@@ -45,12 +46,12 @@
         }
 
         .content p {
-            color: whitesmoke;
+            color: rgba(255,255,255,0.5);
             text-align: left;
             font-style: normal;
-            /*font-family: "Lato", serif;*/
             font-size: larger;
             padding-left: 50px;
+            line-height: 1.5;
         }
 
         .content h2{
@@ -66,10 +67,11 @@
             gap: 20px;
             padding: 60px;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.1);
             background-blend-mode: darken;
             margin: 40px auto;
             /*width: 100%;*/
+            grid-template-rows: auto auto;
         }
 
         .grid-column h3 {
@@ -82,9 +84,212 @@
             font-size: 20px;
             line-height: 1.5;
         }
+
+        .about-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .about-button {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 12px 24px;
+            font-size: 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .about-button:hover {
+            background-color: #333;
+        }
+
+        .full-span {
+            grid-column: span 4;
+            display: flex;
+            justify-content: center;
+        }
+
+        .team-section {
+            padding: 60px;
+            text-align: center;
+            /*background-color: rgba(0, 0, 0, 0.1);*/
+        }
+
+        .team-section h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .athlete {
+            width: 250px;
+            flex: 0 0 auto;
+        }
+
+        .athlete img {
+            width: 125%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .athlete-name {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .contact-section {
+            padding: 60px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-section h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 12px 24px;
+            font-size: 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #333;
+        }
+        .gallery-section {
+            padding: 60px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .gallery-section h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .events-section {
+            padding: 60px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .events-section h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .events-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .event-card {
+            display: block;
+            width: 280px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: black;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .event-card p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .gallery-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .gallery-scroll {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px;
+        }
+
+        .gallery-scroll img {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+        .scroll-button {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 10px 16px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .scroll-button.left {
+            position: absolute;
+            left: 0;
+        }
+
+        .scroll-button.right {
+            position: absolute;
+            right: 0;
+        }
     </style>
     <title>Home</title>
 </head>
+
+<!---------------------------------------------------------------------------Start---Body------------------------------------------------------------------------------------------------------>
 
 <body>
 
@@ -92,9 +297,9 @@
 
     <div class="content">
         <div class="banner-title">
-            <h1>Welcome to the </br>Player Club Management</h1>
-            <p>Unlock your full potential in the NIL space with a team that puts athletes first.</br>Whether you're a student-athlete looking to maximize your brand or a business</br>searching for top-tier athlete partnerships, we're here
-                to connect you to the right opportunities.</p>
+            <h1>Welcome to the</br>Player Club Management</h1>
+            <p>Empowering athletes to thrive in the NIL era.</p>
+            <p>Whether you’re a student-athlete building your brand or a business seeking top talent, we connect you with game-changing opportunities.</p>
         </div>
     </div>
 
@@ -115,7 +320,86 @@
         <h3>Marketing & Exposure</h3>
         <p>Our team ensures athletes get the visibility they deserve.</p>
       </div>
+      <div class="grid-column full-span about-button-container">
+          <a href="./about.html" class="about-button">More About Us</a>
+      </div>
     </div>
+
+
+    <div class="team-section">
+        <h2>Top Player</h2>
+        <div class="team-grid">
+            <div class="athlete">
+                <img src="./Pictures/player1.png" alt="athlete 1">
+                <p class="athlete-name">Amos Aguilera</p>
+            </div>
+            <div class="athlete">
+                <img src="./Pictures/player2.png" alt="athlete 2">
+                <p class="athlete-name">Amos Aguilera</p>
+            </div>
+            <div class="athlete">
+                <img src="./Pictures/player3.png" alt="athlete 3">
+                <p class="athlete-name">Amos Aguilera</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-section">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <button class="scroll-button left" onclick="scrollGallery(-1)">&#10094;</button>
+            <div class="gallery-scroll">
+                <img src="./Pictures/gallery1.png" alt="Gallery Image 1">
+                <img src="./Pictures/gallery2.png" alt="Gallery Image 2">
+                <img src="./Pictures/gallery3.png" alt="Gallery Image 3">
+                <img src="./Pictures/gallery4.png" alt="Gallery Image 4">
+                <img src="./Pictures/gallery5.png" alt="Gallery Image 5">
+                <img src="./Pictures/gallery6.png" alt="Gallery Image 6">
+                <img src="./Pictures/gallery7.png" alt="Gallery Image 7">
+                <img src="./Pictures/gallery8.png" alt="Gallery Image 8">
+                <img src="./Pictures/gallery9.png" alt="Gallery Image 9">
+                <img src="./Pictures/gallery10.png" alt="Gallery Image 10">
+                <img src="./Pictures/gallery11.png" alt="Gallery Image 11">
+                <img src="./Pictures/gallery12.png" alt="Gallery Image 12">
+                <img src="./Pictures/gallery13.png" alt="Gallery Image 13">
+                <img src="./Pictures/gallery14.png" alt="Gallery Image 14">
+                <img src="./Pictures/gallery15.png" alt="Gallery Image 15">
+                <img src="./Pictures/gallery16.png" alt="Gallery Image 16">
+                <img src="./Pictures/gallery17.png" alt="Gallery Image 17">
+                <img src="./Pictures/gallery18.png" alt="Gallery Image 18">
+                <img src="./Pictures/gallery19.png" alt="Gallery Image 19">
+            </div>
+            <button class="scroll-button right" onclick="scrollGallery(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="events-section">
+        <h2>Upcoming Events</h2>
+        <div class="events-grid">
+            <a class="event-card" href="#" target="_blank">
+                <h3>Summer Combine 2025</h3>
+                <p>July 15, 2025 — Sacramento, CA</p>
+            </a>
+            <a class="event-card" href="#" target="_blank">
+                <h3>Elite Training Camp</h3>
+                <p>August 2, 2025 — Austin, TX</p>
+            </a>
+            <a class="event-card" href="#" target="_blank">
+                <h3>Fall Showcase</h3>
+                <p>September 10, 2025 — Los Angeles, CA</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <h2>Get in Touch</h2>
+        <p>Have questions or want to work with us? We'd love to hear from you.</p>
+        <div class="contact-button-container">
+            <a href="./contact.html" class="contact-button">Contact Us</a>
+        </div>
+    </div>
+
+
 
     <div id="footer-placeholder"></div>
 
@@ -144,6 +428,11 @@
                 }, 100);
             })
             .catch(error => console.error("Error loading footer:", error));
+        function scrollGallery(direction) {
+            const container = document.querySelector(".gallery-scroll");
+            const scrollAmount = 220;
+            container.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+        }
     </script>
 
 </body>
