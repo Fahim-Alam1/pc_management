@@ -304,6 +304,7 @@ h1{
 		<div style = "padding-top: 10vh;"></div>
 
 		<!--Footer-->
+		<!--Old Footer
 		<div class="footer">
 			<div class="footer-section">
 				<img src="main_logo.JPG" alt="Logo" width="90">
@@ -343,7 +344,9 @@ h1{
 			<div class="copyright">
 				Copyright & Privacy information for the company if needed
 			</div>
-		</div>
+		</div> -->
+
+		<div id="footer-placeholder"></div>
 
 
 		<script>
@@ -352,12 +355,26 @@ h1{
     		.then(data => {
         	document.getElementById("header-placeholder").innerHTML = data;
 
+
         // Ensure styling applies after loading header
         	setTimeout(() => {
      	       document.querySelector(".header-content").classList.add("image-container");
      	   }, 100);
    		})
     	.catch(error => console.error("Error loading header:", error));
+
+
+        	fetch('./footer.html')
+    		.then(response => response.text())
+    		.then(data => {
+        	document.getElementById("footer-placeholder").innerHTML = data;
+
+        // Ensure styling applies after loading footer
+        	setTimeout(() => {
+     	       document.querySelector(".footer-content").classList.add("image-container");
+     	   }, 100);
+   		})
+    	.catch(error => console.error("Error loading footer:", error));
 
 
 function load_data(name,Id_ref){
