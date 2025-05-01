@@ -257,11 +257,13 @@
             overflow-x: auto;
             scroll-behavior: smooth;
             padding: 10px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
         }
 
         .gallery-scroll img {
-            width: 400px;
-            height: auto;
+            width: auto;
+            height: 400px;
             border-radius: 10px;
             flex-shrink: 0;
         }
@@ -432,6 +434,5 @@
             container.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
         }
     </script>
-
 </body>
 </html>
