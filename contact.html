@@ -1,6 +1,4 @@
 <!--#include virtual="/header.html" -->
-<h1 style="margin-top: 50px; font-size: 50px;">Connect with our Team</h1>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us</title>
     <style>
-        @font-face { font-family: Bodoni; src: url(./fonts/BodoniFLF-Roman.ttf);}
-        @font-face { font-family: Bodoni; font-weight: bold; src: url(./fonts/BodoniFLF-Bold.ttf);}
-        /* Page background*/
+        @font-face { font-family: Bodoni; src: url(./fonts/BodoniFLF-Roman.ttf); }
+        @font-face { font-family: Bodoni; font-weight: bold; src: url(./fonts/BodoniFLF-Bold.ttf); }
+
         body {
             margin: 0;
             background-color: #faeacd;
@@ -18,185 +16,17 @@
             font-family: Bodoni, serif;
             text-align: center;
         }
-        /* Footer style */
-        .footer {
-            background-color: black;
-            color: white;
-            padding: 30px 50px;
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin: 0;
-        }
-
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .footer h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .footer ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer ul li {
-            margin-bottom: 5px;
-        }
-
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .footer .copyright {
-            width: 100%;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-
-        .social-icons {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .social-icons img {
-            width: 24px; /* Adjust icon size */
-            height: 24px;
-        }
-
-        .text-box-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            padding: 60px;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.4);
-            background-blend-mode: darken;
-            margin: 40px auto;
-            /*width: 100%;*/
-        }
-
-        .grid-column h3 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .grid-column p {
-            font-size: 20px;
-            line-height: 1.5;
-        }
-
-        .social-icons {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .social-icons img {
-            width: 24px; /* Adjust icon size */
-            height: 24px;
-        }
-        .side-contact-info {
-            position: absolute;
-            bottom: 100px; /* Adjust as needed */
-            right: 80px;   /* Adjust as needed */
-            background-color: #fff;
-            padding: 15px 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
-            font-size: 14px;
-            text-align: left;
-        }
-
-        .side-contact-info .info-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        .side-contact-info a {
-            color: black;
-            text-decoration: none;
-        }
-
-        .side-contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* textbox placement/styling*/
-        .text-box {
-            background-color: white; /* Box background */
-            border: 2px solid black; /* Border around the box */
-            padding: 20px; /* Adds space inside the box */
-            margin: 20px auto;
-            width: 50%; /* Adjust width as needed */
-            max-width: 700px; /* Limits max width */
-            text-align: center; /* Centers the text */
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a drop shadow */
-            border-radius: 10px; /* Rounds the corners */
-            font-family: "Bodoni", serif;
-        }
-
-        .text-box h2 {
-            text-align: center;
-            font-family: Bodoni , serif;
-            font-weight: bold;
-            font-style: normal;
-        }
-
-        /* Centered Header Styling
-        .header {
-            background: #191919;
-            padding:  10px 16px;
-            text-align: center;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-        }
-*/
-        /* Contact Form Styling */
-        .contact-container {
-            background: #ffffff;
-            width: 40%;
-            margin: 50px auto;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
 
         h1 {
             font-size: 50px;
-            margin-bottom: 20px; /* Less gap under heading */
-            margin-top: 50px;    /* Good gap from header.html */
+            margin-bottom: 40px;
+            margin-top: 120px;
         }
 
-
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
 
         input, textarea {
             width: 90%;
@@ -222,109 +52,157 @@
             background: #333;
         }
 
-       /*  Responsive for mobile */
-        @media screen and (max-width: 768px) {
-            .contact-container {
-                width: 80%;
-            }
+        .main-content-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-            .nav-links {
-                flex-direction: column;
-                gap: 80px;
-            }
+        .contact-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .form-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .contact-container {
+            background: #ffffff;
+            width: 500px;
+            max-width: 100%;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .side-contact-info {
+            position: absolute;
+            right: -280px; /* Increased to add space */
+            bottom: -0px; /* Adds vertical spacing from bottom of form */
+            background-color: #fff;
+            padding: 15px 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+            font-size: 14px;
+            text-align: left;
+            width: 200px;
         }
 
 
+        .side-contact-info .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .side-contact-info a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .side-contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 30px 50px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .form-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .side-contact-info {
+                position: static;
+                margin-top: 30px;
+                width: 100%;
+                max-width: 500px;
+            }
+        }
     </style>
 </head>
 
 <body>
+<div id="header"></div>
+<div class="image-container" id="header-placeholder"></div>
 
-<!--
-<div class="header">
-
-    <a href="index.html">
-        <img src="main_logo.JPG" alt="Logo" width="40" >
-    </a>
-    <div class="nav-links">
-        <a href="athletes.html">Athletes</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
-    </div>
-</div>
--->
 <h1>Connect with our Team</h1>
 
-<div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 30px;">
+<div class="main-content-wrapper">
+    <div class="contact-section">
+        <div class="form-wrapper">
+            <!-- Contact Form -->
+            <div class="contact-container">
+                <h2>Get in Touch with Us</h2>
+                <form action="https://formspree.io/f/mzzdnwqn" method="POST">
+                    <input type="text" name="name" placeholder="Insert name here" required>
+                    <input type="email" name="email" placeholder="Insert email here" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Submit Your Message Request" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
 
-    <!-- Contact Form -->
-    <div class="contact-container">
-        <h2>Get in Touch with Us</h2>
-        <form action="https://formspree.io/f/mzzdnwqn" method="POST">
-            <input type="text" name="name" placeholder="Insert name here" required>
-            <input type="email" name="email" placeholder="Insert email here" required>
-            <input type="text" name="subject" placeholder="Subject" required>
-            <textarea name="message" placeholder="Submit Your Message Request" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
-
-    <!-- Side Contact Info Box -->
-    <div class="side-contact-info">
-        <div class="info-item">
-            <img src="email-icon.png" alt="Email" width="22" height="22">
-            <a href="mailto:contact@yourdomain.com">contact@yourdomain.com</a>
+            <!-- Contact Info Box -->
+            <div class="side-contact-info">
+                <div class="info-item">
+                    <img src="email-icon.png" alt="Email" width="22" height="22">
+                    <a href="mailto:contact@yourdomain.com">contact@yourdomain.com</a>
+                </div>
+                <div class="info-item">
+                    <img src="phone_icon.png" alt="Phone" width="22" height="22">
+                    <a href="tel:1234567890">(123) 456-7890</a>
+                </div>
+            </div>
         </div>
-        <div class="info-item">
-            <img src="phone_icon.png" alt="Phone" width="22" height="22">
-            <a href="tel:1234567890">(123) 456-7890</a>
-        </div>
     </div>
-
 </div>
-
-
-<!-- <div class="footer">
-    <div class="contact-info">
-        <img src="images/email-icon.png" alt="Example@gmail.com">
-    </div> -->
-    <!-- Header will be loaded here -->
-    <div id="header"></div>
-    <div class="image-container" id="header-placeholder"></div>
-
-<!-- Footer Section -->
 
 <div id="footer-placeholder"></div>
 
-    <!-- JavaScript to load header.html -->
-    <script>
-        fetch('./header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header-placeholder").innerHTML = data;
+<script>
+    fetch('./header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            setTimeout(() => {
+                document.querySelector(".header-content")?.classList.add("image-container");
+            }, 100);
+        })
+        .catch(error => console.error("Error loading header:", error));
 
-                // Ensure styling applies after loading header
-                setTimeout(() => {
-                    document.querySelector(".header-content").classList.add("image-container");
-                }, 100);
-            })
-            .catch(error => console.error("Error loading header:", error));
-
-        //Goes in script
-        fetch('./footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer-placeholder").innerHTML = data;
-
-                // Ensure styling applies after loading footer
-                setTimeout(() => {
-                    document.querySelector(".footer-content").classList.add("image-container");
-                }, 100);
-            })
-            .catch(error => console.error("Error loading footer:", error));
-    </script>
+    fetch('./footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+            setTimeout(() => {
+                document.querySelector(".footer-content")?.classList.add("image-container");
+            }, 100);
+        })
+        .catch(error => console.error("Error loading footer:", error));
+</script>
 </body>
 </html>
