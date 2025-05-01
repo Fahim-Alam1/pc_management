@@ -133,21 +133,41 @@
             margin: auto;
         }
 
+        /* Updated athlete card styles */
         .athlete {
-            width: 250px;
+            display: block;
+            width: 100%;
+            max-width: 280px;
+            padding: 0;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: black;
+            transition: transform 0.2s, box-shadow 0.2s;
+            overflow: hidden;
             flex: 0 0 auto;
         }
 
+        .athlete:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
         .athlete img {
-            width: 125%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         .athlete-name {
-            margin-top: 10px;
+            padding: 12px;
             font-size: 20px;
             font-weight: bold;
+            text-align: center;
+            margin-top: 0;
         }
         .contact-section {
             padding: 60px;
@@ -331,18 +351,18 @@
     <div class="team-section">
         <h2>Top Player</h2>
         <div class="team-grid">
-            <div class="athlete">
+            <a href="./athlete_pages/amos_aguilera.html" class="athlete">
                 <img src="./Pictures/player1.png" alt="athlete 1">
                 <p class="athlete-name">Amos Aguilera</p>
-            </div>
-            <div class="athlete">
+            </a>
+            <a href="./athlete_pages/amos_aguilera.html" class="athlete">
                 <img src="./Pictures/player2.png" alt="athlete 2">
                 <p class="athlete-name">Amos Aguilera</p>
-            </div>
-            <div class="athlete">
+            </a>
+            <a href="./athlete_pages/amos_aguilera.html" class="athlete">
                 <img src="./Pictures/player3.png" alt="athlete 3">
                 <p class="athlete-name">Amos Aguilera</p>
-            </div>
+            </a>
         </div>
     </div>
 
