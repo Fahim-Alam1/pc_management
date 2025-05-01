@@ -115,29 +115,6 @@
             height: 24px;
         }
 
-        /* .text-box {
-            background-color: white;
-            border: 2px solid black;
-            padding: 20px;
-            margin: 20px auto;
-            width: 90%;
-            max-width: none;
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            font-family: "Lato", serif;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-        .vertical-line {
-            width: 2px;
-            height: 100%;
-            background-color: black;
-            min-height: 200px;
-            display: inline-block;
-        } */
-
         .text-box-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -174,10 +151,6 @@
             <p>Unlock your full potential in the NIL space with a team that puts athletes first.</br>Whether you're a student-athlete looking to maximize your brand or a business</br>searching for top-tier athlete partnerships, we're here
                 to connect you to the right opportunities.</p>
         </div>
-<!--        <h1>Welcome to the Player Club Management</h1>-->
-<!--        <p>Unlock your full potential in the NIL space with a team that puts athletes first. Whether you're a student-athlete looking to maximize your brand or a business searching for top-tier athlete partnerships, we're here-->
-<!--            to connect you to the right opportunities.</p>-->
-<!--       <p style="height: 1500px;">This is a long page to test scrolling.</p>-->
     </div>
 
     <div class="text-box-grid">
@@ -199,47 +172,7 @@
       </div>
     </div>
 
-    <!-- Footer Section -->
-    <div class="footer">
-        <div class="footer-section">
-            <img src="main_logo.JPG" alt="Logo" width="90">
-            <div class="social-icons">
-                <img src="twitter_icon.png" alt="Twitter"> <a href="#">Social Media Link</a>
-            </div>
-            <div class="social-icons">
-                <img src="phone_icon.png" alt="Phone"> <a href="#">Social Media Link 2</a>
-            </div>
-        </div>
-
-        <div class="footer-section">
-            <h3>Menu</h3>
-            <ul>
-                <li><a href="athletes.html">Athletes</a></li>
-                <li><a href="services.html">Service</a></li>
-                <li><a href="testimonials.html">Testimonial</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>About</h3>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3>Contact Information</h3>
-            <p>Business Email</p>
-            <p>Business Address</p>
-            <p>City, State, Zip</p>
-        </div>
-
-        <div class="copyright">
-            Copyright & Privacy information for the company if needed
-        </div>
-    </div>
+    <div id="footer-placeholder"></div>
 
     <script>
         fetch('./header.html')
@@ -253,6 +186,19 @@
                 }, 100);
             })
             .catch(error => console.error("Error loading header:", error));
+
+        //Goes in script
+        fetch('./footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+
+                // Ensure styling applies after loading footer
+                setTimeout(() => {
+                    document.querySelector(".footer-content").classList.add("image-container");
+                }, 100);
+            })
+            .catch(error => console.error("Error loading footer:", error));
     </script>
 
 </body>
