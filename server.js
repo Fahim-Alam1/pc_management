@@ -54,8 +54,8 @@ app.get("/athlete_data",(req,res) => {
     		    res.end();
     		}
     	});
-    }else if (name){
-      	connection.query('SELECT * FROM athletes where name = ?', [name],function(error, results, fields) {
+    }else if (name && table){
+      	connection.query('SELECT * FROM ' + table +  ' where name = ?', [name],function(error, results, fields) {
     		if (error) throw error;
     		if (results.length > 0) {
     			console.log(results);
@@ -65,6 +65,17 @@ app.get("/athlete_data",(req,res) => {
     		    res.end();
     		}
     	});
+    } else if (table){
+      	connection.query('SELECT * FROM ' + table,function(error, results, fields) {
+        		if (error) throw error;
+        		if (results.length > 0) {
+        			console.log(results);
+        			res.send(results);
+        		}else{
+        		    console.log("failed");
+        		    res.end();
+        		}
+        	});
     } else {
     res.end();
     }
