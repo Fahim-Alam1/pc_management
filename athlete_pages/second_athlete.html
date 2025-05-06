@@ -358,28 +358,28 @@ margin-right: 5%;
 
 		<script>
 
-	function load_data(name,Id_ref){
-        fetch("http://localhost:3000/athlete_data?name=" + name + /*"&need=" + Id_ref +*/"&table=athletes", {
-            method: 'GET',
-            })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log("I got something");
-                var obj = data[0]
-                for (var key in obj){
-                if(key=="name" || key=="intro"){
-                	continue;
-                }
-                document.getElementById(key).innerHTML = obj[key] + "<br>";
-                }
-                })
-            .catch(error => {
-                console.error("you messed up", error);
-            });
-    };
-    window.onload = function() {
-    load_data("Second Athlete","name");
-    };
+			function load_data(name,Id_ref){
+                fetch("http://localhost:3000/athlete_data?name=" + name + /*"&need=" + Id_ref +*/"&table=athletes", {
+                    method: 'GET',
+                    })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log("I got something");
+                        var obj = data[0]
+                        for (var key in obj){
+                        if(key=="name" || key=="intro"){
+                            continue;
+                        }
+                        document.getElementById(key).innerHTML = obj[key] + "<br>";
+                        }
+                        })
+                    .catch(error => {
+                        console.error("you messed up", error);
+                    });
+            };
+            window.onload = function() {
+            load_data("Second Athlete","name");
+            };
 
 
 </script>

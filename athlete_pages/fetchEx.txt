@@ -1,0 +1,13 @@
+fetch("../testerFile.json")
+    .then((response) => response.json())
+    .then((data) => {
+        console.log("I got something");
+        console.log(data);
+
+        //This is where you handle the data array
+
+
+
+    .catch(error => {
+        console.error("Something broke.  You created a null somewhere", error);
+});
