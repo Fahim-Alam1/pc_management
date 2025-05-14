@@ -3,7 +3,7 @@ Instructions to run the website application
 1. Ensure NodeJS and npm are installed
 2. Run mysql-installer-web-community-8.0.42.0.msi to setup and install mysql.  Follow the instructions on this page (https://dev.mysql.com/doc/mysql-getting-started/en/)
       and choose the instructions based on your platform and remembering the setting for the root password. 
-3. Once installed its time to build the database.  In the file ".env" use a text editor to change the DB_PASSWORD parameter to the root password you set earlier
+3. Once installed its time to build the database.  In the file ".env" use a text editor to change the DB_PASSWORD parameter to the root password you set earlier. Please also add an ADMIN ROOT and ADMIN PASS as you will need these to login to the admin later. 
 4. Open a command prompt in this directory
 5. Run the command: Node build.js
 6. Once the console says "Build Complete" Run the command: Node server.js
