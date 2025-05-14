@@ -19,21 +19,14 @@ const con = mysql.createConnection({
 con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
-	con.changeUser({ database: 'players_club' }, (err) => {
-        if (err) {
- 		 con.query("CREATE DATABASE players_club", function (err, result) {
-   		 if (err) throw err;
-    		console.log("Database created");
- 			con.changeUser({ database: 'players_club' }, (err) => {
-        		if (err) throw err;
-   			 });
 
-		});
-		};
-		});
-
-
-   
+   con.query("CREATE DATABASE IF NOT EXISTS players_club", function (err, result) {
+      		 if (err) throw err;
+       		console.log("Database created");
+   		});
+   	 con.changeUser({ database: 'players_club' }, (err) => {
+         if (err) throw err;
+     });
     con.query("CREATE TABLE IF NOT EXISTS admin_users (username varchar(20), password varchar(20))",[process.env.DB_DATABASE], function (err, result){
         if (err) throw err;
         console.log("Admin Table created");
