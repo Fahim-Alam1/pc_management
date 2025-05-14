@@ -10,7 +10,7 @@ require('dotenv').config();
 app.use(cors());
 app.use(express.json());
 
-const connection = mysql.createConnection({
+const con = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
