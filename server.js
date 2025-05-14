@@ -6,6 +6,7 @@ const mysql = require('mysql2')
 const path = require('path');
 const fs = require('node:fs');
 const cors = require('cors');
+require('dotenv').config();
 
 app.use(cors());
 
@@ -39,6 +40,9 @@ app.get("/athlete_data", (req, res) => {
 	});
 })
 */
+
+
+
 app.get("/athlete_data",(req,res) => {
     const table = req.query.table
     const name = req.query.name
@@ -112,12 +116,14 @@ app.post("/athlete_data",(req, res) => {
 }});
 
 
+
 const connection = mysql.createConnection({
-	host     : 'localhost',
-	user     : 'root',
-	password : '41740722Gh0.',
-	database : 'players_club'
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
 });
+
 
 app.use(session({
 	secret: 'secret',
