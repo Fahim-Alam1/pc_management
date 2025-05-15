@@ -91,7 +91,7 @@
             <div class="team-member">
                 <img src= "./Pictures/blank-profile-picture.png" alt="Team Member 1">
                 <h3 id="test1">Role</h3>
-                <p id="tester1a">tester1</p>
+                <p id="test1a">tester1</p>
             </div>
             <div class="team-member">
                 <img src="./Pictures/blank-profile-picture.png" alt="Team Member 2">
@@ -150,12 +150,12 @@
         .then((data) => {
             console.log("I got something");
             console.log(data);
-        document.getElementById("test1").innerHTML = data[0].role;
-        document.getElementById("tester").innerHTML = data[0].name;
-        document.getElementById("test2").innerHTML = data[1].role;
-        document.getElementById("test2a").innerHTML = data[1].name;
-        document.getElementById("test3").innerHTML = data[2].role;
-        document.getElementById("test3a").innerHTML = data[2].name;
+        document.getElementById("test1").innerHTML = data[0].name;
+        document.getElementById("test1a").innerHTML = data[0].role;
+        document.getElementById("test2").innerHTML = data[1].name;
+        document.getElementById("test2a").innerHTML = data[1].role;
+        document.getElementById("test3").innerHTML = data[2].name;
+        document.getElementById("test3a").innerHTML = data[2].role;
             //This is where you handle the data array
 
 
