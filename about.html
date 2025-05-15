@@ -144,7 +144,7 @@
             container.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
         }
 
-        fetch("../testerFile.json")
+        fetch("./testerFile.json")
         .then((response) => response.json())
         .then((data) => {
             console.log("I got something");
