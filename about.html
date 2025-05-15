@@ -88,22 +88,22 @@
         <h2>Our Team</h2>
         <div class="team">
             <div class="team-member">
-                <img src="team1.png" alt="Team Member 1">
+                <img src= "./Pictures/blank-profile-picture.png" alt="Team Member 1">
                 <h3>Role</h3>
                 <p>tester1</p>
             </div>
             <div class="team-member">
-                <img src="team2.png" alt="Team Member 2">
+                <img src="./Pictures/blank-profile-picture.png" alt="Team Member 2">
                 <h3>Role</h3>
                 <p>tester2</p>
             </div>
             <div class="team-member">
-                <img src="team3.png" alt="Team Member 3">
+                <img src="./Pictures/blank-profile-picture.png" alt="Team Member 3">
                 <h3>Role</h3>
                 <p>tester3</p>
             </div>
             <div class="team-member">
-                <img src="team4.png" alt="Team Member 4">
+                <img src="./Pictures/blank-profile-picture.png" alt="Team Member 4">
                 <h3>Role</h3>
                 <p>tester4</p>
             </div>
@@ -149,13 +149,18 @@
         .then((data) => {
             console.log("I got something");
             console.log(data);
-
+         document.getElementById(name + " " + Id_ref).innerHTML = data[0].intro;})
             //This is where you handle the data array
 
 
 
     .catch(error => {
         console.error("Something broke.  You created a null somewhere", error);
+
+    window.onload = function() {
+    load_data("Amos Aguilera","name");
+    load_data("Second Athlete","intro");
+};
 });
     </script>
 
