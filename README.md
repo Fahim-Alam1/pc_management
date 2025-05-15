@@ -18,7 +18,7 @@ Clever Cloud: This is the hosting service that we used for the database.
 
 Once those accounts are made you will need to fork one of our two github repositories  into your personal github (they have been split up to make it easier for your deployment).
 
-Fork this github (it will be used in Vercel): git@github.com:gjhollmann/players_server.git 
+Fork this github (it will be used in Vercel): https://github.com/gjhollmann/players_server.git
 (if you would like the following github contains the entire source code https://github.com/Fahim-Alam1/pc_management ) 
 
 Then in Clever Cloud dashboard, along the left side you will follow this path:
