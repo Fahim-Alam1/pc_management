@@ -277,34 +277,35 @@
 	</section>
 
 	<div style = "padding-top: 10vh;"></div>
-		
-	<script>
-					fetch('./header.html')
-    		.then(response => response.text())
-    		.then(data => {
-        	document.getElementById("header-placeholder").innerHTML = data;
+	<div id="footer-placeholder" style = "margin:-20px;"></div>
 
-
-        // Ensure styling applies after loading header
-        	setTimeout(() => {
-     	       document.querySelector(".header-content").classList.add("image-container");
-     	   }, 100);
-   		})
-    	.catch(error => console.error("Error loading header:", error));
-
-
-        	fetch('./footer.html')
-    		.then(response => response.text())
-    		.then(data => {
-        	document.getElementById("footer-placeholder").innerHTML = data;
-
-        // Ensure styling applies after loading footer
-        	setTimeout(() => {
-     	       document.querySelector(".footer-content").classList.add("image-container");
-     	   }, 100);
-   		})
-    	.catch(error => console.error("Error loading footer:", error));
-	</script>
 </body>
-	<div id="footer-placeholder"></div>
+
+<script>
+	fetch('./header.html')
+.then(response => response.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+
+
+// Ensure styling applies after loading header
+setTimeout(() => {
+document.querySelector(".header-content").classList.add("image-container");
+}, 100);
+})
+.catch(error => console.error("Error loading header:", error));
+
+
+fetch('./footer.html')
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer-placeholder").innerHTML = data;
+
+// Ensure styling applies after loading footer
+setTimeout(() => {
+document.querySelector(".footer-content").classList.add("image-container");
+}, 100);
+})
+.catch(error => console.error("Error loading footer:", error));
+</script>
 </html>
