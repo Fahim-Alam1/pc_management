@@ -361,7 +361,7 @@ margin-right: 5%;
 		<script>
 
 	function load_data(name,Id_ref){
-        fetch("http://localhost:3000/athlete_data?name=" + name + /*"&need=" + Id_ref +*/"&table=athletes", {
+        fetch("https://players-server.vercel.app/athlete_data?name=" + name + /*"&need=" + Id_ref +*/"&table=athletes", {
             method: 'GET',
             })
             .then((response) => response.json())
