@@ -94,7 +94,7 @@
             </div>
             <div class="team-member">
                 <img src="./Pictures/blank-profile-picture.png" alt="Team Member 2">
-                <h3>Role</h3>
+                <h3 id="tester">Role</h3>
                 <p>tester2</p>
             </div>
             <div class="team-member">
@@ -149,7 +149,7 @@
         .then((data) => {
             console.log("I got something");
             console.log(data);
-         document.getElementById(name + " " + Id_ref).innerHTML = data[0].intro;})
+         document.getElementById("tester").innerHTML = data[0].role;})
             //This is where you handle the data array
 
 
@@ -157,9 +157,7 @@
     .catch(error => {
         console.error("Something broke.  You created a null somewhere", error);
 
-    window.onload = function() {
-    load_data("Amos Aguilera","name");
-    load_data("Second Athlete","intro");
+   
 };
 });
     </script>
