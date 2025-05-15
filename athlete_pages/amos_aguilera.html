@@ -361,7 +361,7 @@ margin-right: 5%;
 		<script>
 //change to localhost:3000 if needed
 var local = " "
-fetch("./location.json")
+fetch("../location.json")
         .then((response) => response.json())
         .then((data) => {
             local = data[0].location;
