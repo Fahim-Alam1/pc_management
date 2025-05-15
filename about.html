@@ -150,8 +150,12 @@
         .then((data) => {
             console.log("I got something");
             console.log(data);
-         document.getElementById("tester").innerHTML = data[0].role;
-        document.getElementById("test1").innerHTML = data[0].name;
+        document.getElementById("test1").innerHTML = data[0].role;
+        document.getElementById("tester").innerHTML = data[0].name;
+        document.getElementById("test2").innerHTML = data[1].role;
+        document.getElementById("test2a").innerHTML = data[1].name;
+        document.getElementById("test3").innerHTML = data[2].role;
+        document.getElementById("test3a").innerHTML = data[2].name;
             //This is where you handle the data array
 
 
