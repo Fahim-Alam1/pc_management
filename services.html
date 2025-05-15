@@ -1,141 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Services</title>
-  <style>
-    @font-face {
-      font-family: Bodoni;
-      src: url(./fonts/BodoniFLF-Roman.ttf);
-    }
-    @font-face {
-      font-family: Bodoni;
-      font-weight: bold;
-      src: url(./fonts/BodoniFLF-Bold.ttf);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        @font-face { font-family: Bodoni; src: url(./fonts/BodoniFLF-Roman.ttf);}
+        @font-face { font-family: Bodoni; font-weight: bold; src: url(./fonts/BodoniFLF-Bold.ttf);}
 
-    body {
-      margin: auto;
-      background-color: #faeacd;
-      color: #000;
-      line-height: 1.5;
-      font-family: Arial, sans-serif;
-    }
+        body{
+            margin: auto;
+            background-color:#faeacd;
+            color: #ffffff;
+            line-height: 1.5;
+        }
 
-    h1 {
-      color: black;
-      text-align: center;
-      font-family: Bodoni, serif;
-      font-weight: bold;
-      font-size: 2.5vw;
-    }
+        h1{
+            color: black;
+            text-align: center;
+            font-family: Bodoni, serif;
+            font-weight: bold;
+            font-size: 2.5vw;
+        }
 
-    .service-container {
-      display: grid;
-      grid-template-columns: 30vw 30vw 30vw;
-      gap: 3%;
-      justify-content: center;
-      padding: 2%;
-    }
+        .service-container{
+            display: grid;
+            grid-template-columns:30vw 30vw 30vw;
+            align-items:center;
+            padding:2%;
+            grid-column-gap: 3%;
+        }
+        .service{
+            color: black;
+            display: grid;
+            align-items:center;
+            grid-template-row: 1fr 3fr;
+            margin-bottom: 2%;
+            background-color: white; /* Box background */
+            border: 2px solid black; /* Border around the box */
+            padding: 20px; /* Adds space inside the box */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a drop shadow */
+            border-radius: 10px; /* Rounds the corners */
+        }
+        .service_photo{
+            object-fit:cover;
+            max-width:100%;
+            min-width:90%;
+            aspect-ratio:1.0;
+        }
 
-    .service {
-      background-color: white;
-      border: 2px solid black;
-      padding: 20px;
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-      border-radius: 10px;
-      display: grid;
-      grid-template-rows: auto auto auto;
-      gap: 10px;
-    }
 
-    .service h2 {
-      margin: 0;
-      font-family: Bodoni, serif;
-      color: black;
-    }
+        .container_paragraph{
+            display: grid;
+            grid-template-row: 5fr 7fr 1fr;
+            gap: 20px;
+        }
+        .container > div.buttons{
+            align: center;
+            padding-top:5.0vw
+            display: grid;
+            align-items:center;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .paragraph_text{
+            white-space: pre-line;
+            margin-right:5%;
+            color: black;
+            display:inline;
+        }
 
-    .service p {
-      margin: 0;
-      color: black;
-    }
-
-    .service_photo {
-      object-fit: cover;
-      width: 100%;
-      aspect-ratio: 1;
-      border-radius: 5px;
-    }
-
-    .buttons {
-      text-align: center;
-      padding-top: 5vw;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-    }
-
-    .paragraph_text {
-      white-space: pre-line;
-      margin-right: 5%;
-      color: black;
-      display: inline;
-    }
-  </style>
+    </style>
 </head>
 <body>
-  <div id="header-placeholder" class="image-container"></div>
-  <div style="padding-top: 100px;"></div>
+    <div class="image-container" id="header-placeholder"></div>
+    <div style = "padding-top: 100px;"></div>
 
-  <main>
     <section class="services">
-      <h1>Our Services</h1>
-      <div class="service-container">
-        <div class="service">
-          <h2>Athlete Representation</h2>
-          <p>We have support for athletes in securing NIL deals, including branding and sponsorships.</p>
-          <img src="athlete_pages/athlete_data/second_athlete/second_image_3.png" alt="Athlete Representation" class="service_photo" />
+        <h1>Our Services</h1>
+        <div class="service-container">
+            <div class="service">
+                <h2>Athlete Representation</h2>
+                <p>We have support for athletes in securing NIL deals, including branding and sponsorships.</p>
+                <img src="athlete_pages/athlete_data/second_athlete/second_image_3.png" alt="" class ="service_photo">
+            </div>
+            <div class="service">
+                <h2>Brand Partnerships</h2>
+                <p>We can help you connect brands with athletes for marketing campaigns.</p>
+                <img src="athlete_pages/athlete_data/amos_aguilera/amos_highlight_1.png" alt="" class ="service_photo">
+            </div>
+            <div class="service">
+                <h2>Educational Resources</h2>
+                <p>We offer workshops, articles, or webinars to educate athletes.</p>
+                <img src="athlete_pages/athlete_data/amos_aguilera/amos_highlight_3.png" alt="" class ="service_photo">
+            </div>
         </div>
-        <div class="service">
-          <h2>Brand Partnerships</h2>
-          <p>We can help you connect brands with athletes for marketing campaigns.</p>
-          <img src="athlete_pages/athlete_data/amos_aguilera/amos_highlight_1.png" alt="Brand Partnerships" class="service_photo" />
-        </div>
-        <div class="service">
-          <h2>Educational Resources</h2>
-          <p>We offer workshops, articles, or webinars to educate athletes.</p>
-          <img src="athlete_pages/athlete_data/amos_aguilera/amos_highlight_3.png" alt="Educational Resources" class="service_photo" />
-        </div>
-      </div>
     </section>
-  </main>
 
-  <div style="padding-top: 10vh;"></div>
-  <div id="footer-placeholder"></div>
-
-  <script>
+    <div style = "padding-top: 10vh;"></div>
+    <div id="footer-placeholder"></div>
+<script>
     fetch('./header.html')
-      .then(response => response.text())
-      .then(data => {
+    .then(response => response.text())
+    .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
+
+//  forcing an update
+        
+    // Ensure styling applies after loading header
         setTimeout(() => {
-          const header = document.querySelector(".header-content");
-          if (header) header.classList.add("image-container");
+        document.querySelector(".header-content").classList.add("image-container");
         }, 100);
-      })
-      .catch(error => console.error("Error loading header:", error));
+    })
+    .catch(error => console.error("Error loading header:", error));
+
 
     fetch('./footer.html')
-      .then(response => response.text())
-      .then(data => {
+    .then(response => response.text())
+    .then(data => {
         document.getElementById("footer-placeholder").innerHTML = data;
+
+        // Ensure styling applies after loading footer
         setTimeout(() => {
-          const footer = document.querySelector(".footer-content");
-          if (footer) footer.classList.add("image-container");
+        document.querySelector(".footer-content").classList.add("image-container");
         }, 100);
-      })
-      .catch(error => console.error("Error loading footer:", error));
-  </script>
+    })
+    .catch(error => console.error("Error loading footer:", error));
+</script>
 </body>
 </html>
