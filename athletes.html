@@ -378,7 +378,7 @@ h1{
    		})
     	.catch(error => console.error("Error loading footer:", error));
 
-
+//change to localhost:3000 if needed
 function load_data(name,Id_ref){
     fetch("https://players-server.vercel.app/athlete_data?name=" + name + "&need=intro&table=athletes", {
         method: 'GET',
