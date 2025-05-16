@@ -57,10 +57,10 @@ INSERT INTO admin_users VALUES ('admin', 'pass')
 Hit Go
 
 Next Copy and Paste the following:
-INSERT INTO athletes (`name`,`intro`,`school`,`weight`,`hometown`,`class`,`height`,`interests`,`sport`,`positional_profile`,`body`,`hit`,`power`,`arm`,`defense`,`athletic_testing`) VALUES ('Amos Aguilera','Amos Aguilera is a 6 1 , 170-pound first baseman from Fontana, CA, with a tall, projectable frame and room to add strength. A multi-sport athlete competing in basketball and wrestling, he brings athleticism, coordination, and toughness to the baseball field. Defensively, he has soft hands, solid footwork, and a strong feel for the glove, making him a reliable presence at first base. His short arm action leads to accurate throws, and with further development—particularly by driving through his target—he can add more velocity.','Jurupa Hills High School','200 lbs','Fontana, CA','Junior (2026)','6 4','Christian/ Believes in the lord, Fitness, WWE, Recovery & Wellness','Baseball/Basketball/Wrestling','1B','6-3, 200 pounds. Strong frame with present strength.','RHH. Slightly open stance that evens out when he strides. Hands rest away from back shoulder. Higher launch angle that produces a lot of fly balls. 64.3 mph bat speed with 12g of rotational acceleration.','89 mph max exit velocity (78 avg.); 339-foot max batted distance. Consistently pulls the ball.','RH. INF - 71.00 mph. Side arm release across the infield.','Calm footwork through the play.','7.55 runner in the 60-yard dash; Long, tall strides.')
+INSERT INTO athletes (\`name\`,\`intro\`,\`school\`,\`weight\`,\`hometown\`,\`class\`,\`height\`,\`interests\`,\`sport\`,\`positional_profile\`,\`body\`,\`hit\`,\`power\`,\`arm\`,\`defense\`,\`athletic_testing\`) VALUES ('Amos Aguilera','Amos Aguilera is a 6 1 , 170-pound first baseman from Fontana, CA, with a tall, projectable frame and room to add strength. A multi-sport athlete competing in basketball and wrestling, he brings athleticism, coordination, and toughness to the baseball field. Defensively, he has soft hands, solid footwork, and a strong feel for the glove, making him a reliable presence at first base. His short arm action leads to accurate throws, and with further development—particularly by driving through his target—he can add more velocity.','Jurupa Hills High School','200 lbs','Fontana, CA','Junior (2026)','6 4','Christian/ Believes in the lord, Fitness, WWE, Recovery & Wellness','Baseball/Basketball/Wrestling','1B','6-3, 200 pounds. Strong frame with present strength.','RHH. Slightly open stance that evens out when he strides. Hands rest away from back shoulder. Higher launch angle that produces a lot of fly balls. 64.3 mph bat speed with 12g of rotational acceleration.','89 mph max exit velocity (78 avg.); 339-foot max batted distance. Consistently pulls the ball.','RH. INF - 71.00 mph. Side arm release across the infield.','Calm footwork through the play.','7.55 runner in the 60-yard dash; Long, tall strides.')
 Hit Go
 Lastly Copy and Paste the following:
-INSERT INTO athletes (`name`,`intro`,`school`,`weight`,`hometown`,`class`,`height`,`interests`,`sport`,`positional_profile`,`body`,`hit`,`power`,`arm`,`defense`,`athletic_testing`) VALUES ('Second Athlete','This is the space dedicated to your second athlete','Insert School','20','Insert hometown','class','6 feet','interests','sport','AB','body','hit','power','arm','defense','test')
+INSERT INTO athletes (\`name\`,\`intro\`,\`school\`,\`weight\`,\`hometown\`,\`class\`,\`height\`,\`interests\`,\`sport\`,\`positional_profile\`,\`body\`,\`hit\`,\`power\`,\`arm\`,\`defense\`,\`athletic_testing\`) VALUES ('Second Athlete','This is the space dedicated to your second athlete','Insert School','20','Insert hometown','class','6 feet','interests','sport','AB','body','hit','power','arm','defense','test')
 Hit Go
 
 And that is your database, initialized and set up!
@@ -121,4 +121,25 @@ Thank you for your time.  If you have any issues feel free to contact us.
 George Hollmann
 (916)462-1923
 gjhollmann@gmail.com
+
+
+
+
+
+
+
+
+====================================================================================
+Notes and Resources for graders:
+
+Database Setup Script (Please copy from the github readme portion, copying direct text will include escape characters)
+MySQL was used for the database
+CREATE DATABASE IF NOT EXISTS players_club;
+CREATE TABLE IF NOT EXISTS admin_users (username varchar(20), password varchar(20));
+CREATE TABLE IF NOT EXISTS athletes (name varchar(50), intro varchar(1028),school varchar(50), weight varchar(20), hometown varchar(20), class varchar(20), height varchar(20), interests varchar(112), sport varchar(50), positional_profile varchar(10), body varchar(112), hit varchar(224), power varchar(112), arm varchar(112), defense varchar(112), athletic_testing varchar(112))
+INSERT INTO admin_users VALUES ('admin','pass')
+INSERT INTO athletes (\`name\`,\`intro\`,\`school\`,\`weight\`,\`hometown\`,\`class\`,\`height\`,\`interests\`,\`sport\`,\`positional_profile\`,\`body\`,\`hit\`,\`power\`,\`arm\`,\`defense\`,\`athletic_testing\`) VALUES ('Amos Aguilera','Amos Aguilera is a 6 1 , 170-pound first baseman from Fontana, CA, with a tall, projectable frame and room to add strength. A multi-sport athlete competing in basketball and wrestling, he brings athleticism, coordination, and toughness to the baseball field. Defensively, he has soft hands, solid footwork, and a strong feel for the glove, making him a reliable presence at first base. His short arm action leads to accurate throws, and with further development—particularly by driving through his target—he can add more velocity.','Jurupa Hills High School','200 lbs','Fontana, CA','Junior (2026)','6 4','Christian/ Believes in the lord, Fitness, WWE, Recovery & Wellness','Baseball/Basketball/Wrestling','1B','6-3, 200 pounds. Strong frame with present strength.','RHH. Slightly open stance that evens out when he strides. Hands rest away from back shoulder. Higher launch angle that produces a lot of fly balls. 64.3 mph bat speed with 12g of rotational acceleration.','89 mph max exit velocity (78 avg.); 339-foot max batted distance. Consistently pulls the ball.','RH. INF - 71.00 mph. Side arm release across the infield.','Calm footwork through the play.','7.55 runner in the 60-yard dash; Long, tall strides.')
+INSERT INTO athletes (\`name\`,\`intro\`,\`school\`,\`weight\`,\`hometown\`,\`class\`,\`height\`,\`interests\`,\`sport\`,\`positional_profile\`,\`body\`,\`hit\`,\`power\`,\`arm\`,\`defense\`,\`athletic_testing\`) VALUES ('Second Athlete','This is the space dedicated to your second athlete','Insert School','20','Insert hometown','class','6 feet','interests','sport','AB','body','hit','power','arm','defense','test')
+
+
 
