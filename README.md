@@ -9,6 +9,8 @@ Website access:
 https://fahim-alam1.github.io/pc_management/
 
 ========================================================================================================================================================
+
+
 For client deployment this will be changed depending on the domain, and database that the client chooses to rent.  
 
 
@@ -130,6 +132,8 @@ gjhollmann@gmail.com
 
 
 ====================================================================================
+
+
 Notes and Resources for graders:
 
 Database Setup Script (Please copy from the github readme portion, copying direct text will include escape characters)
