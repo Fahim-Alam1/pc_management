@@ -8,10 +8,17 @@ https://players-server.vercel.app/login
 Website access:
 https://fahim-alam1.github.io/pc_management/
 
-
+========================================================================================================================================================
 For client deployment this will be changed depending on the domain, and database that the client chooses to rent.  
 
+
+Following are two sets of instructions.  The first set explains how to setup the remote server and hosting services that we had used during the demonstration.  These servers have a decent free option and can easilly be changed to paid version that have more stability, space, and reliabilty. 
+The second set of instructions explains how to create a local version of the web application.  This is generally for testing purposes and will not work as a website unless further security measures are configured on your internet service provider's network.  
+
+=========================================================================================================================================================
+
 If you would like to deploy the website using the same method as us the you will need to create accounts for the following services:
+
 GitHub: Having an account will expedite the services below
 Vercel: This will be the hosting service that hosts the backend features and api
 Clever Cloud: This is the hosting service that we used for the database. 
@@ -85,3 +92,33 @@ The website will work on the following links
 
 Backend and admin access: https://players-server.vercel.app/login (This may change if the domain name used earlier is different.  It will always be the domain with /login at the end.)
 Website access: https://fahim-alam1.github.io/pc_management/
+
+
+================================================================================================================================
+
+If you would like to deploy the web application locally use the following instructions
+
+Instructions to run the website application
+
+1. Ensure NodeJS and npm are installed
+2. Download a zip of this source repository if you have not already, and unzip to your preferred location.  
+3. Run mysql-installer-web-community-8.0.42.0.msi to setup and install mysql.  At a minimum install MySQL server, the other features are not required.
+4. During the installation of mysql, be sure to set a password for the root user and save this. 
+5. Once installed its time to build the database.  In the file ".env" use a text editor to change the DB_PASSWORD parameter to the root password you set earlier. Please also add an ADMIN ROOT and ADMIN PASS as you will need these to login to the admin later. 
+6. Open a command prompt in the directory that all of the files have been unzipped to.
+7. Run the command: Node build.js
+8. Once the build program ends Run the command: Node server.js 
+9. This starts up the server. The provided link in the console is used to access the admin portions of the app
+10. Now to visit the website use the link: http://fahim-alam1.github.io/pc_management/
+11. The application should now be running!
+
+
+========================================================
+
+
+Thank you for your time.  If you have any issues feel free to contact us.  
+
+George Hollmann
+(916)462-1923
+gjhollmann@gmail.com
+
