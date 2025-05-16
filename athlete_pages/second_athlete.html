@@ -358,8 +358,15 @@ margin-right: 5%;
 
 		<script>
 //change to localhost:3000 if needed
+var local = " "
+fetch("../location.json")
+        .then((response) => response.json())
+        .then((data) => {
+            local = data[0].location;
+         });
+
 			function load_data(name,Id_ref){
-                fetch("https://players-server.vercel.app/athlete_data?name=" + name + /*"&need=" + Id_ref +*/"&table=athletes", {
+                fetch(local + "/athlete_data?name=" + name + /*"&need=" + Id_ref +*/"&table=athletes", {
                     method: 'GET',
                     })
                     .then((response) => response.json())
