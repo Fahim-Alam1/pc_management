@@ -291,8 +291,16 @@ document.getElementById("Second_Intro").onclick = function() {
 		}
 		};
 
+var local = " "
+fetch("./location.json")
+        .then((response) => response.json())
+        .then((data) => {
+            local = data[0].location;
+         });
+
+
 	function load_data(name,Id_ref,table){
-        fetch("http://localhost:3000/athlete_data?name=" + name + "&need=" + Id_ref + "&table=" + table, {
+        fetch(local + "/athlete_data?name=" + name + "&need=" + Id_ref + "&table=" + table, {
             method: 'GET',
             })
             .then((response) => response.json())
@@ -310,7 +318,7 @@ document.getElementById("Second_Intro").onclick = function() {
 
 	function save_data(name,need,table){
 			var text_to_save = document.getElementById("txt_edit").value;
-			fetch("http://localhost:3000/athlete_data?name=" + name + "&need=" + need + "&table=" + table, {
+			fetch(local + "/athlete_data?name=" + name + "&need=" + need + "&table=" + table, {
 				method: 'POST',
 				headers: {
                     "Content-Type": "application/json",
