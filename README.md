@@ -19,7 +19,7 @@ Clever Cloud: This is the hosting service that we used for the database.
 Once those accounts are made you will need to fork one of our two github repositories  into your personal github (they have been split up to make it easier for your deployment).
 
 Fork this github (it will be used in Vercel): https://github.com/gjhollmann/players_server.git
-(if you would like the following github contains the entire source code https://github.com/Fahim-Alam1/pc_management ) 
+Fork this github (it will be used for frontend and shows the source code) https://github.com/Fahim-Alam1/pc_management 
 
 Then in Clever Cloud dashboard, along the left side you will follow this path:
 + Create
@@ -79,7 +79,8 @@ lastly set an environment variable for the domain name of the Vercel Application
 This will typically be the the project name followed by .vercel.app. So if the project was named players-server use the following:
 DOMAIN = players-server.vercel.app
 
-And now its deployed!
+And now everything has been deployed!
+
 The website will work on the following links
 
 Backend and admin access: https://players-server.vercel.app/login (This may change if the domain name used earlier is different.  It will always be the domain with /login at the end.)
