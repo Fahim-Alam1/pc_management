@@ -8,6 +8,10 @@ https://players-server.vercel.app/login
 Website access:
 https://fahim-alam1.github.io/pc_management/
 
+For this demonstration currently the username and password combo that exists for admin access is the following:
+Username: George
+Passwrod: Joseph
+
 ========================================================================================================================================================
 
 
