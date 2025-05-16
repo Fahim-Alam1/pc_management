@@ -75,9 +75,12 @@ set these to default or as listed
 DB_ADMIN = admin
 DB_PASS = pass
 
+lastly set an environment variable for the domain name of the Vercel Application
+This will typically be the the project name followed by .vercel.app. So if the project was named players-server use the following:
+DOMAIN = players-server.vercel.app
 
 And now its deployed!
 The website will work on the following links
 
-Backend and admin access: https://players-server.vercel.app/login
+Backend and admin access: https://players-server.vercel.app/login (This may change if the domain name used earlier is different.  It will always be the domain with /login at the end.)
 Website access: https://fahim-alam1.github.io/pc_management/
